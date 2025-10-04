@@ -1,0 +1,2443 @@
+Using MPS device (Apple Silicon GPU)
+Args in experiment:
+Namespace(activation='gelu', batch_size=64, c_out=1, channel_independence=False, checkpoints='./checkpoints/', class_strategy='projection', d_ff=512, d_layers=1, d_model=128, data='ETTm1', data_path='ETTm1.csv', dec_in=7, des='Exp', devices='mps', distil=True, do_predict=False, dropout=0.0, e_layers=2, efficient_training=False, embed='timeF', enc_in=7, exp_name='MTSF', factor=1, features='MS', freq='h', gpu=0, grad_clip=3.0, inverse=False, is_training=1, itr=1, label_len=48, learning_rate=1e-05, loss='MSE', lradj='cosine', model='iTransformer', model_id='ETTm1_96_24', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, partial_start_index=0, patience=5, pred_len=24, root_path='./iTransformer_datasets/ETT-small/', seq_len=96, target='OT', target_data_path='electricity.csv', target_root_path='./data/electricity/', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, use_norm=True, warmup_epochs=2, weight_decay=0.0001)
+Use GPU: mps (Apple Silicon)
+>>>>>>>start training : ETTm1_96_24_iTransformer_ETTm1_MS_ft96_sl48_ll24_pl128_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ETTm1.csv Split Info:
+  Total: 69,680 samples
+  Train: 48,776 samples (70.0%)
+  Val:   7,064 samples (10.1%)
+  Test:  14,032 samples (20.1%)
+train 48657
+val 6945
+test 13913
+Batch stats: mean=0.1562, std=1.0804, min=-3.8020, max=4.6500
+	iters: 100, epoch: 1 | loss: 0.0717697
+	speed: 0.0192s/iter; left time: 144.2513s
+	iters: 200, epoch: 1 | loss: 0.0811812
+	speed: 0.0160s/iter; left time: 118.1783s
+	iters: 300, epoch: 1 | loss: 0.0568976
+	speed: 0.0162s/iter; left time: 118.4395s
+	iters: 400, epoch: 1 | loss: 0.0835405
+	speed: 0.0163s/iter; left time: 117.5984s
+	iters: 500, epoch: 1 | loss: 0.0763053
+	speed: 0.0170s/iter; left time: 120.9187s
+	iters: 600, epoch: 1 | loss: 0.0647212
+	speed: 0.0161s/iter; left time: 112.6843s
+	iters: 700, epoch: 1 | loss: 0.0849020
+	speed: 0.0167s/iter; left time: 115.0724s
+Epoch: 1 cost time: 12.714998006820679
+[DIAGNÓSTICO] Época 1:
+  LR actual: 0.00000976
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.043027
+  Norm de pesos: 166.398367
+  Grad norm promedio: 0.106326
+  Grad norm máximo: 0.330897
+Epoch: 1, Steps: 760 | Train Loss: 0.0735671 Vali Loss: 0.0184920 Test Loss: 0.0274688
+Validation loss decreased (inf --> 0.018492).  Saving model ...
+	iters: 100, epoch: 2 | loss: 0.0564560
+	speed: 0.3670s/iter; left time: 2474.1064s
+	iters: 200, epoch: 2 | loss: 0.0731423
+	speed: 0.0159s/iter; left time: 105.3875s
+	iters: 300, epoch: 2 | loss: 0.0527754
+	speed: 0.0161s/iter; left time: 105.3060s
+	iters: 400, epoch: 2 | loss: 0.0431915
+	speed: 0.0162s/iter; left time: 104.3367s
+	iters: 500, epoch: 2 | loss: 0.0499927
+	speed: 0.0161s/iter; left time: 102.3615s
+	iters: 600, epoch: 2 | loss: 0.0426853
+	speed: 0.0161s/iter; left time: 100.5262s
+	iters: 700, epoch: 2 | loss: 0.0639299
+	speed: 0.0160s/iter; left time: 98.4202s
+Epoch: 2 cost time: 12.243284940719604
+[DIAGNÓSTICO] Época 2:
+  LR actual: 0.00000905
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.114396
+  Norm de pesos: 167.474902
+  Grad norm promedio: 0.069883
+  Grad norm máximo: 0.148092
+Epoch: 2, Steps: 760 | Train Loss: 0.0522152 Vali Loss: 0.0152169 Test Loss: 0.0233213
+Validation loss decreased (0.018492 --> 0.015217).  Saving model ...
+	iters: 100, epoch: 3 | loss: 0.0525075
+	speed: 0.3684s/iter; left time: 2203.5470s
+	iters: 200, epoch: 3 | loss: 0.0603195
+	speed: 0.0162s/iter; left time: 95.4661s
+	iters: 300, epoch: 3 | loss: 0.0519404
+	speed: 0.0161s/iter; left time: 93.2215s
+	iters: 400, epoch: 3 | loss: 0.0393522
+	speed: 0.0163s/iter; left time: 92.5923s
+	iters: 500, epoch: 3 | loss: 0.0447983
+	speed: 0.0161s/iter; left time: 89.7784s
+	iters: 600, epoch: 3 | loss: 0.0467408
+	speed: 0.0162s/iter; left time: 88.7201s
+	iters: 700, epoch: 3 | loss: 0.0374405
+	speed: 0.0162s/iter; left time: 87.1750s
+Epoch: 3 cost time: 12.274420022964478
+[DIAGNÓSTICO] Época 3:
+  LR actual: 0.00000796
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.041433
+  Norm de pesos: 168.604061
+  Grad norm promedio: 0.063823
+  Grad norm máximo: 0.119096
+Epoch: 3, Steps: 760 | Train Loss: 0.0475017 Vali Loss: 0.0145490 Test Loss: 0.0224064
+Validation loss decreased (0.015217 --> 0.014549).  Saving model ...
+	iters: 100, epoch: 4 | loss: 0.0633781
+	speed: 0.3671s/iter; left time: 1916.4319s
+	iters: 200, epoch: 4 | loss: 0.0793736
+	speed: 0.0159s/iter; left time: 81.6232s
+	iters: 300, epoch: 4 | loss: 0.0400235
+	speed: 0.0160s/iter; left time: 80.1795s
+	iters: 400, epoch: 4 | loss: 0.0320925
+	speed: 0.0160s/iter; left time: 78.7388s
+	iters: 500, epoch: 4 | loss: 0.0470705
+	speed: 0.0163s/iter; left time: 78.7644s
+	iters: 600, epoch: 4 | loss: 0.0455512
+	speed: 0.0162s/iter; left time: 76.4538s
+	iters: 700, epoch: 4 | loss: 0.0496094
+	speed: 0.0161s/iter; left time: 74.3830s
+Epoch: 4 cost time: 12.211902856826782
+[DIAGNÓSTICO] Época 4:
+  LR actual: 0.00000658
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.058693
+  Norm de pesos: 169.737773
+  Grad norm promedio: 0.061851
+  Grad norm máximo: 0.135466
+Epoch: 4, Steps: 760 | Train Loss: 0.0463586 Vali Loss: 0.0143561 Test Loss: 0.0221195
+Validation loss decreased (0.014549 --> 0.014356).  Saving model ...
+	iters: 100, epoch: 5 | loss: 0.0387904
+	speed: 0.3684s/iter; left time: 1643.4009s
+	iters: 200, epoch: 5 | loss: 0.0436572
+	speed: 0.0167s/iter; left time: 72.8230s
+	iters: 300, epoch: 5 | loss: 0.0454332
+	speed: 0.0165s/iter; left time: 70.4711s
+	iters: 400, epoch: 5 | loss: 0.0437469
+	speed: 0.0165s/iter; left time: 68.8238s
+	iters: 500, epoch: 5 | loss: 0.0417942
+	speed: 0.0166s/iter; left time: 67.4069s
+	iters: 600, epoch: 5 | loss: 0.0526910
+	speed: 0.0162s/iter; left time: 64.1722s
+	iters: 700, epoch: 5 | loss: 0.0442147
+	speed: 0.0164s/iter; left time: 63.3882s
+Epoch: 5 cost time: 12.547058820724487
+[DIAGNÓSTICO] Época 5:
+  LR actual: 0.00000505
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.056795
+  Norm de pesos: 170.726099
+  Grad norm promedio: 0.062161
+  Grad norm máximo: 0.134207
+Epoch: 5, Steps: 760 | Train Loss: 0.0457710 Vali Loss: 0.0141948 Test Loss: 0.0219709
+Validation loss decreased (0.014356 --> 0.014195).  Saving model ...
+	iters: 100, epoch: 6 | loss: 0.0507565
+	speed: 0.3737s/iter; left time: 1383.0886s
+	iters: 200, epoch: 6 | loss: 0.0488318
+	speed: 0.0162s/iter; left time: 58.4208s
+	iters: 300, epoch: 6 | loss: 0.0475140
+	speed: 0.0160s/iter; left time: 56.0979s
+	iters: 400, epoch: 6 | loss: 0.0370957
+	speed: 0.0166s/iter; left time: 56.5348s
+	iters: 500, epoch: 6 | loss: 0.0375858
+	speed: 0.0166s/iter; left time: 54.9340s
+	iters: 600, epoch: 6 | loss: 0.0514861
+	speed: 0.0164s/iter; left time: 52.6143s
+	iters: 700, epoch: 6 | loss: 0.0564870
+	speed: 0.0166s/iter; left time: 51.6028s
+Epoch: 6 cost time: 12.5054612159729
+[DIAGNÓSTICO] Época 6:
+  LR actual: 0.00000352
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.050251
+  Norm de pesos: 171.505237
+  Grad norm promedio: 0.063263
+  Grad norm máximo: 0.141604
+Epoch: 6, Steps: 760 | Train Loss: 0.0454782 Vali Loss: 0.0141057 Test Loss: 0.0219169
+Validation loss decreased (0.014195 --> 0.014106).  Saving model ...
+	iters: 100, epoch: 7 | loss: 0.0445770
+	speed: 0.3742s/iter; left time: 1100.6587s
+	iters: 200, epoch: 7 | loss: 0.0423466
+	speed: 0.0161s/iter; left time: 45.8670s
+	iters: 300, epoch: 7 | loss: 0.0326053
+	speed: 0.0163s/iter; left time: 44.7006s
+	iters: 400, epoch: 7 | loss: 0.0470354
+	speed: 0.0164s/iter; left time: 43.4291s
+	iters: 500, epoch: 7 | loss: 0.0407413
+	speed: 0.0163s/iter; left time: 41.4728s
+	iters: 600, epoch: 7 | loss: 0.0363236
+	speed: 0.0163s/iter; left time: 39.7025s
+	iters: 700, epoch: 7 | loss: 0.0500048
+	speed: 0.0166s/iter; left time: 38.9570s
+Epoch: 7 cost time: 12.45197582244873
+[DIAGNÓSTICO] Época 7:
+  LR actual: 0.00000214
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.086937
+  Norm de pesos: 172.052028
+  Grad norm promedio: 0.063815
+  Grad norm máximo: 0.151377
+Epoch: 7, Steps: 760 | Train Loss: 0.0453589 Vali Loss: 0.0140567 Test Loss: 0.0218682
+Validation loss decreased (0.014106 --> 0.014057).  Saving model ...
+	iters: 100, epoch: 8 | loss: 0.0528749
+	speed: 0.3752s/iter; left time: 818.4110s
+	iters: 200, epoch: 8 | loss: 0.0460439
+	speed: 0.0163s/iter; left time: 33.9784s
+	iters: 300, epoch: 8 | loss: 0.0457687
+	speed: 0.0164s/iter; left time: 32.5456s
+	iters: 400, epoch: 8 | loss: 0.0624678
+	speed: 0.0164s/iter; left time: 30.7816s
+	iters: 500, epoch: 8 | loss: 0.0509652
+	speed: 0.0167s/iter; left time: 29.6942s
+	iters: 600, epoch: 8 | loss: 0.0410938
+	speed: 0.0167s/iter; left time: 28.0120s
+	iters: 700, epoch: 8 | loss: 0.0408999
+	speed: 0.0163s/iter; left time: 25.8072s
+Epoch: 8 cost time: 12.503533124923706
+[DIAGNÓSTICO] Época 8:
+  LR actual: 0.00000105
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.056569
+  Norm de pesos: 172.385913
+  Grad norm promedio: 0.064235
+  Grad norm máximo: 0.211929
+Epoch: 8, Steps: 760 | Train Loss: 0.0452737 Vali Loss: 0.0140115 Test Loss: 0.0218716
+Validation loss decreased (0.014057 --> 0.014011).  Saving model ...
+	iters: 100, epoch: 9 | loss: 0.0361600
+	speed: 0.3699s/iter; left time: 525.6250s
+	iters: 200, epoch: 9 | loss: 0.0537879
+	speed: 0.0159s/iter; left time: 21.0638s
+	iters: 300, epoch: 9 | loss: 0.0372820
+	speed: 0.0163s/iter; left time: 19.9450s
+	iters: 400, epoch: 9 | loss: 0.0402135
+	speed: 0.0162s/iter; left time: 18.2137s
+	iters: 500, epoch: 9 | loss: 0.0647591
+	speed: 0.0161s/iter; left time: 16.4709s
+	iters: 600, epoch: 9 | loss: 0.0401969
+	speed: 0.0162s/iter; left time: 14.9307s
+	iters: 700, epoch: 9 | loss: 0.0424055
+	speed: 0.0162s/iter; left time: 13.2935s
+Epoch: 9 cost time: 12.319655179977417
+[DIAGNÓSTICO] Época 9:
+  LR actual: 0.00000034
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.038799
+  Norm de pesos: 172.550832
+  Grad norm promedio: 0.065366
+  Grad norm máximo: 0.137520
+Epoch: 9, Steps: 760 | Train Loss: 0.0452559 Vali Loss: 0.0139971 Test Loss: 0.0218695
+Validation loss decreased (0.014011 --> 0.013997).  Saving model ...
+	iters: 100, epoch: 10 | loss: 0.0424090
+	speed: 0.3682s/iter; left time: 243.3814s
+	iters: 200, epoch: 10 | loss: 0.0331242
+	speed: 0.0165s/iter; left time: 9.2538s
+	iters: 300, epoch: 10 | loss: 0.0429323
+	speed: 0.0161s/iter; left time: 7.4060s
+	iters: 400, epoch: 10 | loss: 0.0383138
+	speed: 0.0161s/iter; left time: 5.8278s
+	iters: 500, epoch: 10 | loss: 0.0567985
+	speed: 0.0161s/iter; left time: 4.1933s
+	iters: 600, epoch: 10 | loss: 0.0629534
+	speed: 0.0168s/iter; left time: 2.7059s
+	iters: 700, epoch: 10 | loss: 0.0357000
+	speed: 0.0165s/iter; left time: 1.0041s
+Epoch: 10 cost time: 12.42918610572815
+[DIAGNÓSTICO] Época 10:
+  LR actual: 0.00000010
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.071094
+  Norm de pesos: 172.604660
+  Grad norm promedio: 0.066052
+  Grad norm máximo: 0.155586
+Epoch: 10, Steps: 760 | Train Loss: 0.0452374 Vali Loss: 0.0140105 Test Loss: 0.0218814
+EarlyStopping counter: 1 out of 5
+>>>>>>>testing : ETTm1_96_24_iTransformer_ETTm1_MS_ft96_sl48_ll24_pl128_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 13913
+test shape: (13913, 1, 24, 1) (13913, 1, 24, 1)
+test shape: (13913, 24, 1) (13913, 24, 1)
+mse:0.021869465708732605, mae:0.10512280464172363
+Using MPS device (Apple Silicon GPU)
+Args in experiment:
+Namespace(activation='gelu', batch_size=64, c_out=1, channel_independence=False, checkpoints='./checkpoints/', class_strategy='projection', d_ff=512, d_layers=1, d_model=128, data='ETTm1', data_path='ETTm1.csv', dec_in=7, des='Exp', devices='mps', distil=True, do_predict=False, dropout=0.0, e_layers=2, efficient_training=False, embed='timeF', enc_in=7, exp_name='MTSF', factor=1, features='MS', freq='h', gpu=0, grad_clip=3.0, inverse=False, is_training=1, itr=1, label_len=48, learning_rate=1e-05, loss='MSE', lradj='cosine', model='iTransformer', model_id='ETTm1_96_48', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, partial_start_index=0, patience=5, pred_len=48, root_path='./iTransformer_datasets/ETT-small/', seq_len=96, target='OT', target_data_path='electricity.csv', target_root_path='./data/electricity/', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, use_norm=True, warmup_epochs=2, weight_decay=0.0001)
+Use GPU: mps (Apple Silicon)
+>>>>>>>start training : ETTm1_96_48_iTransformer_ETTm1_MS_ft96_sl48_ll48_pl128_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ETTm1.csv Split Info:
+  Total: 69,680 samples
+  Train: 48,776 samples (70.0%)
+  Val:   7,064 samples (10.1%)
+  Test:  14,032 samples (20.1%)
+train 48633
+val 6921
+test 13889
+Batch stats: mean=-0.1101, std=0.9596, min=-4.1248, max=4.4721
+	iters: 100, epoch: 1 | loss: 0.1234817
+	speed: 0.0197s/iter; left time: 147.4211s
+	iters: 200, epoch: 1 | loss: 0.0913779
+	speed: 0.0170s/iter; left time: 125.7220s
+	iters: 300, epoch: 1 | loss: 0.0892282
+	speed: 0.0161s/iter; left time: 117.1556s
+	iters: 400, epoch: 1 | loss: 0.0709754
+	speed: 0.0162s/iter; left time: 116.5455s
+	iters: 500, epoch: 1 | loss: 0.0914194
+	speed: 0.0167s/iter; left time: 118.7628s
+	iters: 600, epoch: 1 | loss: 0.1011166
+	speed: 0.0163s/iter; left time: 114.0806s
+	iters: 700, epoch: 1 | loss: 0.0685278
+	speed: 0.0161s/iter; left time: 111.0836s
+Epoch: 1 cost time: 12.801673889160156
+[DIAGNÓSTICO] Época 1:
+  LR actual: 0.00000976
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.049443
+  Norm de pesos: 167.681089
+  Grad norm promedio: 0.076503
+  Grad norm máximo: 0.193013
+Epoch: 1, Steps: 759 | Train Loss: 0.0965534 Vali Loss: 0.0275642 Test Loss: 0.0394380
+Validation loss decreased (inf --> 0.027564).  Saving model ...
+	iters: 100, epoch: 2 | loss: 0.1314315
+	speed: 0.3695s/iter; left time: 2487.7046s
+	iters: 200, epoch: 2 | loss: 0.0750100
+	speed: 0.0162s/iter; left time: 107.6308s
+	iters: 300, epoch: 2 | loss: 0.0708852
+	speed: 0.0161s/iter; left time: 105.1900s
+	iters: 400, epoch: 2 | loss: 0.0756084
+	speed: 0.0161s/iter; left time: 103.8580s
+	iters: 500, epoch: 2 | loss: 0.0790747
+	speed: 0.0162s/iter; left time: 102.5395s
+	iters: 600, epoch: 2 | loss: 0.0760949
+	speed: 0.0162s/iter; left time: 100.7507s
+	iters: 700, epoch: 2 | loss: 0.0824520
+	speed: 0.0163s/iter; left time: 99.9195s
+Epoch: 2 cost time: 12.277130842208862
+[DIAGNÓSTICO] Época 2:
+  LR actual: 0.00000905
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.042880
+  Norm de pesos: 168.950696
+  Grad norm promedio: 0.058135
+  Grad norm máximo: 0.129411
+Epoch: 2, Steps: 759 | Train Loss: 0.0790682 Vali Loss: 0.0250965 Test Loss: 0.0363217
+Validation loss decreased (0.027564 --> 0.025096).  Saving model ...
+	iters: 100, epoch: 3 | loss: 0.0641000
+	speed: 0.4737s/iter; left time: 2829.3003s
+	iters: 200, epoch: 3 | loss: 0.0774868
+	speed: 0.0158s/iter; left time: 93.0743s
+	iters: 300, epoch: 3 | loss: 0.0680555
+	speed: 0.0158s/iter; left time: 91.0106s
+	iters: 400, epoch: 3 | loss: 0.0846778
+	speed: 0.0161s/iter; left time: 91.5479s
+	iters: 500, epoch: 3 | loss: 0.0946625
+	speed: 0.0162s/iter; left time: 90.3067s
+	iters: 600, epoch: 3 | loss: 0.0676620
+	speed: 0.0160s/iter; left time: 87.8235s
+	iters: 700, epoch: 3 | loss: 0.0906987
+	speed: 0.0160s/iter; left time: 86.1101s
+Epoch: 3 cost time: 12.141162872314453
+[DIAGNÓSTICO] Época 3:
+  LR actual: 0.00000796
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.039944
+  Norm de pesos: 170.442970
+  Grad norm promedio: 0.055385
+  Grad norm máximo: 0.117285
+Epoch: 3, Steps: 759 | Train Loss: 0.0755282 Vali Loss: 0.0249186 Test Loss: 0.0361615
+Validation loss decreased (0.025096 --> 0.024919).  Saving model ...
+	iters: 100, epoch: 4 | loss: 0.0587216
+	speed: 1.4005s/iter; left time: 7302.3352s
+	iters: 200, epoch: 4 | loss: 0.0527804
+	speed: 0.0162s/iter; left time: 82.7246s
+	iters: 300, epoch: 4 | loss: 0.0730221
+	speed: 0.0160s/iter; left time: 80.0613s
+	iters: 400, epoch: 4 | loss: 0.0806332
+	speed: 0.0161s/iter; left time: 79.1951s
+	iters: 500, epoch: 4 | loss: 0.0642243
+	speed: 0.0165s/iter; left time: 79.2556s
+	iters: 600, epoch: 4 | loss: 0.0576167
+	speed: 0.0163s/iter; left time: 76.6807s
+	iters: 700, epoch: 4 | loss: 0.0583204
+	speed: 0.0161s/iter; left time: 74.3371s
+Epoch: 4 cost time: 12.335137844085693
+[DIAGNÓSTICO] Época 4:
+  LR actual: 0.00000658
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.041076
+  Norm de pesos: 171.864895
+  Grad norm promedio: 0.052462
+  Grad norm máximo: 0.109689
+Epoch: 4, Steps: 759 | Train Loss: 0.0749680 Vali Loss: 0.0246343 Test Loss: 0.0359482
+Validation loss decreased (0.024919 --> 0.024634).  Saving model ...
+	iters: 100, epoch: 5 | loss: 0.0653723
+	speed: 0.3766s/iter; left time: 1677.7689s
+	iters: 200, epoch: 5 | loss: 0.0781599
+	speed: 0.0165s/iter; left time: 71.8079s
+	iters: 300, epoch: 5 | loss: 0.1007163
+	speed: 0.0165s/iter; left time: 70.1645s
+	iters: 400, epoch: 5 | loss: 0.0786652
+	speed: 0.0165s/iter; left time: 68.6106s
+	iters: 500, epoch: 5 | loss: 0.0687233
+	speed: 0.0162s/iter; left time: 65.5501s
+	iters: 600, epoch: 5 | loss: 0.0648139
+	speed: 0.0163s/iter; left time: 64.4188s
+	iters: 700, epoch: 5 | loss: 0.0779849
+	speed: 0.0163s/iter; left time: 62.7229s
+Epoch: 5 cost time: 12.425035238265991
+[DIAGNÓSTICO] Época 5:
+  LR actual: 0.00000505
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.069273
+  Norm de pesos: 173.048686
+  Grad norm promedio: 0.050618
+  Grad norm máximo: 0.106002
+Epoch: 5, Steps: 759 | Train Loss: 0.0745276 Vali Loss: 0.0243503 Test Loss: 0.0357644
+Validation loss decreased (0.024634 --> 0.024350).  Saving model ...
+	iters: 100, epoch: 6 | loss: 0.0859637
+	speed: 0.3707s/iter; left time: 1370.1822s
+	iters: 200, epoch: 6 | loss: 0.0974284
+	speed: 0.0162s/iter; left time: 58.3883s
+	iters: 300, epoch: 6 | loss: 0.0868825
+	speed: 0.0163s/iter; left time: 56.9313s
+	iters: 400, epoch: 6 | loss: 0.0825159
+	speed: 0.0166s/iter; left time: 56.5385s
+	iters: 500, epoch: 6 | loss: 0.0802175
+	speed: 0.0163s/iter; left time: 53.8318s
+	iters: 600, epoch: 6 | loss: 0.0867825
+	speed: 0.0163s/iter; left time: 51.9375s
+	iters: 700, epoch: 6 | loss: 0.0737671
+	speed: 0.0165s/iter; left time: 51.1439s
+Epoch: 6 cost time: 12.462887048721313
+[DIAGNÓSTICO] Época 6:
+  LR actual: 0.00000352
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.049247
+  Norm de pesos: 173.978505
+  Grad norm promedio: 0.050028
+  Grad norm máximo: 0.109285
+Epoch: 6, Steps: 759 | Train Loss: 0.0742632 Vali Loss: 0.0242980 Test Loss: 0.0357716
+Validation loss decreased (0.024350 --> 0.024298).  Saving model ...
+	iters: 100, epoch: 7 | loss: 0.1044367
+	speed: 0.3732s/iter; left time: 1096.1132s
+	iters: 200, epoch: 7 | loss: 0.0768898
+	speed: 0.0162s/iter; left time: 46.0220s
+	iters: 300, epoch: 7 | loss: 0.0933698
+	speed: 0.0164s/iter; left time: 44.9010s
+	iters: 400, epoch: 7 | loss: 0.0618777
+	speed: 0.0166s/iter; left time: 43.8968s
+	iters: 500, epoch: 7 | loss: 0.0663352
+	speed: 0.0162s/iter; left time: 41.2050s
+	iters: 600, epoch: 7 | loss: 0.0916762
+	speed: 0.0165s/iter; left time: 40.1318s
+	iters: 700, epoch: 7 | loss: 0.0694377
+	speed: 0.0166s/iter; left time: 38.7715s
+Epoch: 7 cost time: 12.492959022521973
+[DIAGNÓSTICO] Época 7:
+  LR actual: 0.00000214
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.046799
+  Norm de pesos: 174.645719
+  Grad norm promedio: 0.051021
+  Grad norm máximo: 0.120993
+Epoch: 7, Steps: 759 | Train Loss: 0.0741514 Vali Loss: 0.0241253 Test Loss: 0.0356565
+Validation loss decreased (0.024298 --> 0.024125).  Saving model ...
+	iters: 100, epoch: 8 | loss: 0.0705749
+	speed: 0.3718s/iter; left time: 809.8106s
+	iters: 200, epoch: 8 | loss: 0.0834439
+	speed: 0.0165s/iter; left time: 34.3532s
+	iters: 300, epoch: 8 | loss: 0.0725421
+	speed: 0.0162s/iter; left time: 32.0811s
+	iters: 400, epoch: 8 | loss: 0.0795222
+	speed: 0.0165s/iter; left time: 30.9889s
+	iters: 500, epoch: 8 | loss: 0.0653305
+	speed: 0.0163s/iter; left time: 28.9650s
+	iters: 600, epoch: 8 | loss: 0.0744690
+	speed: 0.0167s/iter; left time: 27.9585s
+	iters: 700, epoch: 8 | loss: 0.0679183
+	speed: 0.0164s/iter; left time: 25.8692s
+Epoch: 8 cost time: 12.473390102386475
+[DIAGNÓSTICO] Época 8:
+  LR actual: 0.00000105
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.048244
+  Norm de pesos: 175.063008
+  Grad norm promedio: 0.050961
+  Grad norm máximo: 0.125926
+Epoch: 8, Steps: 759 | Train Loss: 0.0741947 Vali Loss: 0.0242132 Test Loss: 0.0357687
+EarlyStopping counter: 1 out of 5
+	iters: 100, epoch: 9 | loss: 0.0611362
+	speed: 0.3734s/iter; left time: 529.8612s
+	iters: 200, epoch: 9 | loss: 0.1003636
+	speed: 0.0162s/iter; left time: 21.3737s
+	iters: 300, epoch: 9 | loss: 0.0615029
+	speed: 0.0164s/iter; left time: 20.0248s
+	iters: 400, epoch: 9 | loss: 0.0528524
+	speed: 0.0164s/iter; left time: 18.3518s
+	iters: 500, epoch: 9 | loss: 0.0706597
+	speed: 0.0161s/iter; left time: 16.3829s
+	iters: 600, epoch: 9 | loss: 0.1042521
+	speed: 0.0165s/iter; left time: 15.2093s
+	iters: 700, epoch: 9 | loss: 0.0670944
+	speed: 0.0163s/iter; left time: 13.3457s
+Epoch: 9 cost time: 12.387516975402832
+[DIAGNÓSTICO] Época 9:
+  LR actual: 0.00000034
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.062752
+  Norm de pesos: 175.270941
+  Grad norm promedio: 0.052118
+  Grad norm máximo: 0.123088
+Epoch: 9, Steps: 759 | Train Loss: 0.0742380 Vali Loss: 0.0242534 Test Loss: 0.0357992
+EarlyStopping counter: 2 out of 5
+	iters: 100, epoch: 10 | loss: 0.0824919
+	speed: 0.3712s/iter; left time: 244.9597s
+	iters: 200, epoch: 10 | loss: 0.0801343
+	speed: 0.0161s/iter; left time: 9.0066s
+	iters: 300, epoch: 10 | loss: 0.0518022
+	speed: 0.0163s/iter; left time: 7.5163s
+	iters: 400, epoch: 10 | loss: 0.0746176
+	speed: 0.0164s/iter; left time: 5.9049s
+	iters: 500, epoch: 10 | loss: 0.0610541
+	speed: 0.0165s/iter; left time: 4.2828s
+	iters: 600, epoch: 10 | loss: 0.0934961
+	speed: 0.0165s/iter; left time: 2.6425s
+	iters: 700, epoch: 10 | loss: 0.0621382
+	speed: 0.0163s/iter; left time: 0.9754s
+Epoch: 10 cost time: 12.409919023513794
+[DIAGNÓSTICO] Época 10:
+  LR actual: 0.00000010
+  Grad clip: 3.0
+  Norm de gradientes (último batch): 0.047208
+  Norm de pesos: 175.339145
+  Grad norm promedio: 0.051925
+  Grad norm máximo: 0.123294
+Epoch: 10, Steps: 759 | Train Loss: 0.0742023 Vali Loss: 0.0242415 Test Loss: 0.0358122
+EarlyStopping counter: 3 out of 5
+>>>>>>>testing : ETTm1_96_48_iTransformer_ETTm1_MS_ft96_sl48_ll48_pl128_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 13889
+test shape: (13889, 1, 48, 1) (13889, 1, 48, 1)
+test shape: (13889, 48, 1) (13889, 48, 1)
+mse:0.03565647825598717, mae:0.13560603559017181
+Using MPS device (Apple Silicon GPU)
+Args in experiment:
+Namespace(activation='gelu', batch_size=64, c_out=1, channel_independence=False, checkpoints='./checkpoints/', class_strategy='projection', d_ff=512, d_layers=1, d_model=128, data='ETTm1', data_path='ETTm1.csv', dec_in=7, des='Exp', devices='mps', distil=True, do_predict=False, dropout=0.0, e_layers=2, efficient_training=False, embed='timeF', enc_in=7, exp_name='MTSF', factor=1, features='MS', freq='h', gpu=0, grad_clip=5.0, inverse=False, is_training=1, itr=1, label_len=48, learning_rate=2e-05, loss='MSE', lradj='cosine', model='iTransformer', model_id='ETTm1_96_96', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, partial_start_index=0, patience=7, pred_len=96, root_path='./iTransformer_datasets/ETT-small/', seq_len=96, target='OT', target_data_path='electricity.csv', target_root_path='./data/electricity/', train_epochs=15, use_amp=False, use_gpu=True, use_multi_gpu=False, use_norm=True, warmup_epochs=3, weight_decay=0.0001)
+Use GPU: mps (Apple Silicon)
+>>>>>>>start training : ETTm1_96_96_iTransformer_ETTm1_MS_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ETTm1.csv Split Info:
+  Total: 69,680 samples
+  Train: 48,776 samples (70.0%)
+  Val:   7,064 samples (10.1%)
+  Test:  14,032 samples (20.1%)
+train 48585
+val 6873
+test 13841
+Batch stats: mean=-0.0275, std=0.9870, min=-4.6321, max=4.4721
+	iters: 100, epoch: 1 | loss: 0.1115842
+	speed: 0.0198s/iter; left time: 223.7161s
+	iters: 200, epoch: 1 | loss: 0.1839933
+	speed: 0.0168s/iter; left time: 187.6162s
+	iters: 300, epoch: 1 | loss: 0.1223431
+	speed: 0.0163s/iter; left time: 180.7178s
+	iters: 400, epoch: 1 | loss: 0.1210071
+	speed: 0.0163s/iter; left time: 179.3416s
+	iters: 500, epoch: 1 | loss: 0.1053139
+	speed: 0.0164s/iter; left time: 178.1097s
+	iters: 600, epoch: 1 | loss: 0.0874398
+	speed: 0.0163s/iter; left time: 176.1605s
+	iters: 700, epoch: 1 | loss: 0.1191864
+	speed: 0.0165s/iter; left time: 176.2340s
+Epoch: 1 cost time: 12.816908597946167
+[DIAGNÓSTICO] Época 1:
+  LR actual: 0.00001978
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.071843
+  Norm de pesos: 170.593847
+  Grad norm promedio: 0.050824
+  Grad norm máximo: 0.137375
+Epoch: 1, Steps: 759 | Train Loss: 0.1187879 Vali Loss: 0.0376904 Test Loss: 0.0517727
+Validation loss decreased (inf --> 0.037690).  Saving model ...
+	iters: 100, epoch: 2 | loss: 0.1132624
+	speed: 0.3718s/iter; left time: 3914.0377s
+	iters: 200, epoch: 2 | loss: 0.1457536
+	speed: 0.0164s/iter; left time: 170.7206s
+	iters: 300, epoch: 2 | loss: 0.1061815
+	speed: 0.0168s/iter; left time: 173.5990s
+	iters: 400, epoch: 2 | loss: 0.1067234
+	speed: 0.0163s/iter; left time: 166.8952s
+	iters: 500, epoch: 2 | loss: 0.0865742
+	speed: 0.0165s/iter; left time: 166.9712s
+	iters: 600, epoch: 2 | loss: 0.1148349
+	speed: 0.0174s/iter; left time: 174.0513s
+	iters: 700, epoch: 2 | loss: 0.1340339
+	speed: 0.0165s/iter; left time: 163.5024s
+Epoch: 2 cost time: 12.634932041168213
+[DIAGNÓSTICO] Época 2:
+  LR actual: 0.00001914
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.032683
+  Norm de pesos: 173.945250
+  Grad norm promedio: 0.039450
+  Grad norm máximo: 0.093558
+Epoch: 2, Steps: 759 | Train Loss: 0.1080921 Vali Loss: 0.0370277 Test Loss: 0.0513337
+Validation loss decreased (0.037690 --> 0.037028).  Saving model ...
+	iters: 100, epoch: 3 | loss: 0.1208610
+	speed: 0.3717s/iter; left time: 3631.0247s
+	iters: 200, epoch: 3 | loss: 0.0945192
+	speed: 0.0166s/iter; left time: 160.9526s
+	iters: 300, epoch: 3 | loss: 0.0875970
+	speed: 0.0163s/iter; left time: 156.3557s
+	iters: 400, epoch: 3 | loss: 0.1308365
+	speed: 0.0167s/iter; left time: 158.3908s
+	iters: 500, epoch: 3 | loss: 0.0946483
+	speed: 0.0166s/iter; left time: 155.1920s
+	iters: 600, epoch: 3 | loss: 0.0922172
+	speed: 0.0163s/iter; left time: 151.2237s
+	iters: 700, epoch: 3 | loss: 0.1511090
+	speed: 0.0166s/iter; left time: 152.0683s
+Epoch: 3 cost time: 12.537858009338379
+[DIAGNÓSTICO] Época 3:
+  LR actual: 0.00001811
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.081584
+  Norm de pesos: 177.713138
+  Grad norm promedio: 0.040325
+  Grad norm máximo: 0.107303
+Epoch: 3, Steps: 759 | Train Loss: 0.1081731 Vali Loss: 0.0372503 Test Loss: 0.0523943
+EarlyStopping counter: 1 out of 7
+	iters: 100, epoch: 4 | loss: 0.1031320
+	speed: 0.3707s/iter; left time: 3339.8331s
+	iters: 200, epoch: 4 | loss: 0.1355153
+	speed: 0.0167s/iter; left time: 148.3616s
+	iters: 300, epoch: 4 | loss: 0.1506440
+	speed: 0.0167s/iter; left time: 147.0268s
+	iters: 400, epoch: 4 | loss: 0.1108537
+	speed: 0.0164s/iter; left time: 143.0135s
+	iters: 500, epoch: 4 | loss: 0.1059000
+	speed: 0.0167s/iter; left time: 143.7320s
+	iters: 600, epoch: 4 | loss: 0.1001232
+	speed: 0.0164s/iter; left time: 139.2416s
+	iters: 700, epoch: 4 | loss: 0.1021565
+	speed: 0.0166s/iter; left time: 139.7430s
+Epoch: 4 cost time: 12.59044098854065
+[DIAGNÓSTICO] Época 4:
+  LR actual: 0.00001672
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.048615
+  Norm de pesos: 182.018332
+  Grad norm promedio: 0.049757
+  Grad norm máximo: 0.164780
+Epoch: 4, Steps: 759 | Train Loss: 0.1111251 Vali Loss: 0.0380190 Test Loss: 0.0541884
+EarlyStopping counter: 2 out of 7
+	iters: 100, epoch: 5 | loss: 0.1192038
+	speed: 0.3715s/iter; left time: 3064.5630s
+	iters: 200, epoch: 5 | loss: 0.0888879
+	speed: 0.0167s/iter; left time: 136.2065s
+	iters: 300, epoch: 5 | loss: 0.0906409
+	speed: 0.0165s/iter; left time: 132.6300s
+	iters: 400, epoch: 5 | loss: 0.1846734
+	speed: 0.0165s/iter; left time: 131.1507s
+	iters: 500, epoch: 5 | loss: 0.1002326
+	speed: 0.0165s/iter; left time: 129.6186s
+	iters: 600, epoch: 5 | loss: 0.1394290
+	speed: 0.0164s/iter; left time: 127.4183s
+	iters: 700, epoch: 5 | loss: 0.1577410
+	speed: 0.0165s/iter; left time: 126.2784s
+Epoch: 5 cost time: 12.555675029754639
+[DIAGNÓSTICO] Época 5:
+  LR actual: 0.00001505
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.048866
+  Norm de pesos: 186.179634
+  Grad norm promedio: 0.064773
+  Grad norm máximo: 0.271811
+Epoch: 5, Steps: 759 | Train Loss: 0.1132385 Vali Loss: 0.0385144 Test Loss: 0.0548677
+EarlyStopping counter: 3 out of 7
+	iters: 100, epoch: 6 | loss: 0.1484877
+	speed: 0.3723s/iter; left time: 2788.7321s
+	iters: 200, epoch: 6 | loss: 0.1422958
+	speed: 0.0167s/iter; left time: 123.5032s
+	iters: 300, epoch: 6 | loss: 0.1040101
+	speed: 0.0165s/iter; left time: 120.4875s
+	iters: 400, epoch: 6 | loss: 0.1207916
+	speed: 0.0165s/iter; left time: 118.5526s
+	iters: 500, epoch: 6 | loss: 0.1058252
+	speed: 0.0164s/iter; left time: 116.1429s
+	iters: 600, epoch: 6 | loss: 0.0879722
+	speed: 0.0167s/iter; left time: 116.7533s
+	iters: 700, epoch: 6 | loss: 0.1028766
+	speed: 0.0165s/iter; left time: 113.5589s
+Epoch: 6 cost time: 12.571094989776611
+[DIAGNÓSTICO] Época 6:
+  LR actual: 0.00001316
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.046202
+  Norm de pesos: 189.803597
+  Grad norm promedio: 0.081288
+  Grad norm máximo: 0.305973
+Epoch: 6, Steps: 759 | Train Loss: 0.1139622 Vali Loss: 0.0385568 Test Loss: 0.0542208
+EarlyStopping counter: 4 out of 7
+	iters: 100, epoch: 7 | loss: 0.1059481
+	speed: 0.4210s/iter; left time: 2834.2150s
+	iters: 200, epoch: 7 | loss: 0.1425834
+	speed: 0.0162s/iter; left time: 107.3998s
+	iters: 300, epoch: 7 | loss: 0.1102169
+	speed: 0.0160s/iter; left time: 104.5721s
+	iters: 400, epoch: 7 | loss: 0.1286682
+	speed: 0.0165s/iter; left time: 105.8250s
+	iters: 500, epoch: 7 | loss: 0.1155729
+	speed: 0.0161s/iter; left time: 101.8206s
+	iters: 600, epoch: 7 | loss: 0.1170422
+	speed: 0.0161s/iter; left time: 100.2936s
+	iters: 700, epoch: 7 | loss: 0.1414276
+	speed: 0.0161s/iter; left time: 98.4984s
+Epoch: 7 cost time: 12.270741701126099
+[DIAGNÓSTICO] Época 7:
+  LR actual: 0.00001113
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.149357
+  Norm de pesos: 193.087185
+  Grad norm promedio: 0.085739
+  Grad norm máximo: 0.305391
+Epoch: 7, Steps: 759 | Train Loss: 0.1141852 Vali Loss: 0.0389685 Test Loss: 0.0547983
+EarlyStopping counter: 5 out of 7
+	iters: 100, epoch: 8 | loss: 0.1421134
+	speed: 2.0515s/iter; left time: 12253.4648s
+	iters: 200, epoch: 8 | loss: 0.1511750
+	speed: 0.0157s/iter; left time: 92.1406s
+	iters: 300, epoch: 8 | loss: 0.1203397
+	speed: 0.0157s/iter; left time: 90.8037s
+	iters: 400, epoch: 8 | loss: 0.1002224
+	speed: 0.0157s/iter; left time: 88.8528s
+	iters: 500, epoch: 8 | loss: 0.1244833
+	speed: 0.0158s/iter; left time: 88.0184s
+	iters: 600, epoch: 8 | loss: 0.1131122
+	speed: 0.0159s/iter; left time: 87.2866s
+	iters: 700, epoch: 8 | loss: 0.1067696
+	speed: 0.0158s/iter; left time: 84.6505s
+Epoch: 8 cost time: 11.960652112960815
+[DIAGNÓSTICO] Época 8:
+  LR actual: 0.00000907
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.041336
+  Norm de pesos: 195.873139
+  Grad norm promedio: 0.095120
+  Grad norm máximo: 0.355052
+Epoch: 8, Steps: 759 | Train Loss: 0.1150189 Vali Loss: 0.0392579 Test Loss: 0.0552228
+EarlyStopping counter: 6 out of 7
+	iters: 100, epoch: 9 | loss: 0.0945002
+	speed: 2.5354s/iter; left time: 13219.4630s
+	iters: 200, epoch: 9 | loss: 0.1653864
+	speed: 0.0163s/iter; left time: 83.3675s
+	iters: 300, epoch: 9 | loss: 0.1136476
+	speed: 0.0160s/iter; left time: 80.3340s
+	iters: 400, epoch: 9 | loss: 0.1188538
+	speed: 0.0158s/iter; left time: 77.7262s
+	iters: 500, epoch: 9 | loss: 0.0987308
+	speed: 0.0159s/iter; left time: 76.5059s
+	iters: 600, epoch: 9 | loss: 0.1251368
+	speed: 0.0160s/iter; left time: 75.2894s
+	iters: 700, epoch: 9 | loss: 0.1126490
+	speed: 0.0163s/iter; left time: 75.1499s
+Epoch: 9 cost time: 12.340883016586304
+[DIAGNÓSTICO] Época 9:
+  LR actual: 0.00000704
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.131700
+  Norm de pesos: 198.186019
+  Grad norm promedio: 0.102187
+  Grad norm máximo: 0.486021
+Epoch: 9, Steps: 759 | Train Loss: 0.1157957 Vali Loss: 0.0395998 Test Loss: 0.0556627
+EarlyStopping counter: 7 out of 7
+Early stopping
+>>>>>>>testing : ETTm1_96_96_iTransformer_ETTm1_MS_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 13841
+test shape: (13841, 1, 96, 1) (13841, 1, 96, 1)
+test shape: (13841, 96, 1) (13841, 96, 1)
+mse:0.05133366584777832, mae:0.16710670292377472
+Using MPS device (Apple Silicon GPU)
+Args in experiment:
+Namespace(activation='gelu', batch_size=64, c_out=1, channel_independence=False, checkpoints='./checkpoints/', class_strategy='projection', d_ff=512, d_layers=1, d_model=128, data='ETTm1', data_path='ETTm1.csv', dec_in=7, des='Exp', devices='mps', distil=True, do_predict=False, dropout=0.0, e_layers=2, efficient_training=False, embed='timeF', enc_in=7, exp_name='MTSF', factor=1, features='MS', freq='h', gpu=0, grad_clip=5.0, inverse=False, is_training=1, itr=1, label_len=48, learning_rate=2e-05, loss='MSE', lradj='cosine', model='iTransformer', model_id='ETTm1_96_192', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, partial_start_index=0, patience=7, pred_len=192, root_path='./iTransformer_datasets/ETT-small/', seq_len=96, target='OT', target_data_path='electricity.csv', target_root_path='./data/electricity/', train_epochs=15, use_amp=False, use_gpu=True, use_multi_gpu=False, use_norm=True, warmup_epochs=3, weight_decay=0.0001)
+Use GPU: mps (Apple Silicon)
+>>>>>>>start training : ETTm1_96_192_iTransformer_ETTm1_MS_ft96_sl48_ll192_pl128_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ETTm1.csv Split Info:
+  Total: 69,680 samples
+  Train: 48,776 samples (70.0%)
+  Val:   7,064 samples (10.1%)
+  Test:  14,032 samples (20.1%)
+train 48489
+val 6777
+test 13745
+Batch stats: mean=0.0829, std=1.0120, min=-3.9634, max=4.3701
+	iters: 100, epoch: 1 | loss: 0.1594347
+	speed: 0.0194s/iter; left time: 218.1522s
+	iters: 200, epoch: 1 | loss: 0.1420654
+	speed: 0.0163s/iter; left time: 182.1950s
+	iters: 300, epoch: 1 | loss: 0.2233507
+	speed: 0.0162s/iter; left time: 179.1342s
+	iters: 400, epoch: 1 | loss: 0.1287651
+	speed: 0.0165s/iter; left time: 181.0557s
+	iters: 500, epoch: 1 | loss: 0.1536132
+	speed: 0.0162s/iter; left time: 175.8239s
+	iters: 600, epoch: 1 | loss: 0.1315927
+	speed: 0.0168s/iter; left time: 180.6763s
+	iters: 700, epoch: 1 | loss: 0.1878317
+	speed: 0.0168s/iter; left time: 178.7392s
+Epoch: 1 cost time: 12.826071977615356
+[DIAGNÓSTICO] Época 1:
+  LR actual: 0.00001978
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.030698
+  Norm de pesos: 172.925316
+  Grad norm promedio: 0.039955
+  Grad norm máximo: 0.096175
+Epoch: 1, Steps: 757 | Train Loss: 0.1714298 Vali Loss: 0.0557146 Test Loss: 0.0814697
+Validation loss decreased (inf --> 0.055715).  Saving model ...
+	iters: 100, epoch: 2 | loss: 0.1579972
+	speed: 0.3793s/iter; left time: 3981.9931s
+	iters: 200, epoch: 2 | loss: 0.1563434
+	speed: 0.0169s/iter; left time: 175.4183s
+	iters: 300, epoch: 2 | loss: 0.1359746
+	speed: 0.0165s/iter; left time: 169.8718s
+	iters: 400, epoch: 2 | loss: 0.1497377
+	speed: 0.0166s/iter; left time: 168.8210s
+	iters: 500, epoch: 2 | loss: 0.1571879
+	speed: 0.0171s/iter; left time: 173.1130s
+	iters: 600, epoch: 2 | loss: 0.1944221
+	speed: 0.0172s/iter; left time: 172.3924s
+	iters: 700, epoch: 2 | loss: 0.1534084
+	speed: 0.0169s/iter; left time: 167.1544s
+Epoch: 2 cost time: 12.748036861419678
+[DIAGNÓSTICO] Época 2:
+  LR actual: 0.00001914
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.034095
+  Norm de pesos: 175.864657
+  Grad norm promedio: 0.034248
+  Grad norm máximo: 0.069994
+Epoch: 2, Steps: 757 | Train Loss: 0.1602103 Vali Loss: 0.0549940 Test Loss: 0.0809306
+Validation loss decreased (0.055715 --> 0.054994).  Saving model ...
+	iters: 100, epoch: 3 | loss: 0.1333442
+	speed: 0.3682s/iter; left time: 3586.9119s
+	iters: 200, epoch: 3 | loss: 0.1358926
+	speed: 0.0162s/iter; left time: 155.8777s
+	iters: 300, epoch: 3 | loss: 0.1167515
+	speed: 0.0166s/iter; left time: 158.7739s
+	iters: 400, epoch: 3 | loss: 0.1319760
+	speed: 0.0170s/iter; left time: 160.6563s
+	iters: 500, epoch: 3 | loss: 0.1466558
+	speed: 0.0166s/iter; left time: 155.4301s
+	iters: 600, epoch: 3 | loss: 0.0979951
+	speed: 0.0171s/iter; left time: 157.6671s
+	iters: 700, epoch: 3 | loss: 0.1853460
+	speed: 0.0164s/iter; left time: 149.7217s
+Epoch: 3 cost time: 12.54764986038208
+[DIAGNÓSTICO] Época 3:
+  LR actual: 0.00001811
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.042469
+  Norm de pesos: 179.413599
+  Grad norm promedio: 0.035908
+  Grad norm máximo: 0.116348
+Epoch: 3, Steps: 757 | Train Loss: 0.1598378 Vali Loss: 0.0551709 Test Loss: 0.0817062
+EarlyStopping counter: 1 out of 7
+	iters: 100, epoch: 4 | loss: 0.1956367
+	speed: 0.3623s/iter; left time: 3255.3909s
+	iters: 200, epoch: 4 | loss: 0.2018771
+	speed: 0.0171s/iter; left time: 152.1891s
+	iters: 300, epoch: 4 | loss: 0.2031368
+	speed: 0.0170s/iter; left time: 149.5843s
+	iters: 400, epoch: 4 | loss: 0.1644824
+	speed: 0.0169s/iter; left time: 146.4431s
+	iters: 500, epoch: 4 | loss: 0.1420969
+	speed: 0.0177s/iter; left time: 151.7254s
+	iters: 600, epoch: 4 | loss: 0.1658510
+	speed: 0.0171s/iter; left time: 145.4753s
+	iters: 700, epoch: 4 | loss: 0.2648249
+	speed: 0.0174s/iter; left time: 145.7437s
+Epoch: 4 cost time: 12.938658952713013
+[DIAGNÓSTICO] Época 4:
+  LR actual: 0.00001672
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.061582
+  Norm de pesos: 183.459021
+  Grad norm promedio: 0.048301
+  Grad norm máximo: 0.154723
+Epoch: 4, Steps: 757 | Train Loss: 0.1613035 Vali Loss: 0.0554275 Test Loss: 0.0820626
+EarlyStopping counter: 2 out of 7
+	iters: 100, epoch: 5 | loss: 0.1674751
+	speed: 0.3636s/iter; left time: 2991.4526s
+	iters: 200, epoch: 5 | loss: 0.1781710
+	speed: 0.0168s/iter; left time: 136.2699s
+	iters: 300, epoch: 5 | loss: 0.1417028
+	speed: 0.0166s/iter; left time: 133.4091s
+	iters: 400, epoch: 5 | loss: 0.1501549
+	speed: 0.0167s/iter; left time: 132.6323s
+	iters: 500, epoch: 5 | loss: 0.1424332
+	speed: 0.0163s/iter; left time: 127.9565s
+	iters: 600, epoch: 5 | loss: 0.1532400
+	speed: 0.0165s/iter; left time: 127.6353s
+	iters: 700, epoch: 5 | loss: 0.1534703
+	speed: 0.0164s/iter; left time: 125.0947s
+Epoch: 5 cost time: 12.491746187210083
+[DIAGNÓSTICO] Época 5:
+  LR actual: 0.00001505
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.154631
+  Norm de pesos: 187.595116
+  Grad norm promedio: 0.070444
+  Grad norm máximo: 0.333173
+Epoch: 5, Steps: 757 | Train Loss: 0.1630466 Vali Loss: 0.0553960 Test Loss: 0.0828876
+EarlyStopping counter: 3 out of 7
+	iters: 100, epoch: 6 | loss: 0.1733380
+	speed: 0.3633s/iter; left time: 2713.9867s
+	iters: 200, epoch: 6 | loss: 0.1593300
+	speed: 0.0163s/iter; left time: 120.3611s
+	iters: 300, epoch: 6 | loss: 0.1831611
+	speed: 0.0165s/iter; left time: 119.7528s
+	iters: 400, epoch: 6 | loss: 0.1368672
+	speed: 0.0163s/iter; left time: 117.0808s
+	iters: 500, epoch: 6 | loss: 0.1583333
+	speed: 0.0162s/iter; left time: 114.8574s
+	iters: 600, epoch: 6 | loss: 0.1543207
+	speed: 0.0167s/iter; left time: 116.2421s
+	iters: 700, epoch: 6 | loss: 0.1578420
+	speed: 0.0167s/iter; left time: 114.7841s
+Epoch: 6 cost time: 12.457287073135376
+[DIAGNÓSTICO] Época 6:
+  LR actual: 0.00001316
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.162099
+  Norm de pesos: 191.477342
+  Grad norm promedio: 0.101518
+  Grad norm máximo: 0.724717
+Epoch: 6, Steps: 757 | Train Loss: 0.1644949 Vali Loss: 0.0556914 Test Loss: 0.0838155
+EarlyStopping counter: 4 out of 7
+	iters: 100, epoch: 7 | loss: 0.1638764
+	speed: 0.3617s/iter; left time: 2428.7533s
+	iters: 200, epoch: 7 | loss: 0.1438220
+	speed: 0.0165s/iter; left time: 109.2134s
+	iters: 300, epoch: 7 | loss: 0.1466391
+	speed: 0.0164s/iter; left time: 106.5172s
+	iters: 400, epoch: 7 | loss: 0.1463322
+	speed: 0.0163s/iter; left time: 104.6333s
+	iters: 500, epoch: 7 | loss: 0.1320566
+	speed: 0.0167s/iter; left time: 105.2433s
+	iters: 600, epoch: 7 | loss: 0.1327943
+	speed: 0.0167s/iter; left time: 103.6785s
+	iters: 700, epoch: 7 | loss: 0.2117388
+	speed: 0.0167s/iter; left time: 101.9063s
+Epoch: 7 cost time: 12.545692920684814
+[DIAGNÓSTICO] Época 7:
+  LR actual: 0.00001113
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.057545
+  Norm de pesos: 194.885579
+  Grad norm promedio: 0.132179
+  Grad norm máximo: 1.132694
+Epoch: 7, Steps: 757 | Train Loss: 0.1651787 Vali Loss: 0.0559412 Test Loss: 0.0837087
+EarlyStopping counter: 5 out of 7
+	iters: 100, epoch: 8 | loss: 0.1374554
+	speed: 0.3620s/iter; left time: 2156.2601s
+	iters: 200, epoch: 8 | loss: 0.2336450
+	speed: 0.0165s/iter; left time: 96.4016s
+	iters: 300, epoch: 8 | loss: 0.1979768
+	speed: 0.0165s/iter; left time: 94.9310s
+	iters: 400, epoch: 8 | loss: 0.2303410
+	speed: 0.0165s/iter; left time: 93.2524s
+	iters: 500, epoch: 8 | loss: 0.1331120
+	speed: 0.0163s/iter; left time: 90.5945s
+	iters: 600, epoch: 8 | loss: 0.1644324
+	speed: 0.0162s/iter; left time: 88.1735s
+	iters: 700, epoch: 8 | loss: 0.1522503
+	speed: 0.0162s/iter; left time: 86.6623s
+Epoch: 8 cost time: 12.376430988311768
+[DIAGNÓSTICO] Época 8:
+  LR actual: 0.00000907
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.100519
+  Norm de pesos: 197.782328
+  Grad norm promedio: 0.156287
+  Grad norm máximo: 1.253650
+Epoch: 8, Steps: 757 | Train Loss: 0.1656750 Vali Loss: 0.0560286 Test Loss: 0.0841350
+EarlyStopping counter: 6 out of 7
+	iters: 100, epoch: 9 | loss: 0.1336502
+	speed: 0.3617s/iter; left time: 1880.9334s
+	iters: 200, epoch: 9 | loss: 0.2111418
+	speed: 0.0162s/iter; left time: 82.6511s
+	iters: 300, epoch: 9 | loss: 0.1995120
+	speed: 0.0164s/iter; left time: 81.9632s
+	iters: 400, epoch: 9 | loss: 0.1684306
+	speed: 0.0166s/iter; left time: 81.1725s
+	iters: 500, epoch: 9 | loss: 0.1885565
+	speed: 0.0162s/iter; left time: 77.8376s
+	iters: 600, epoch: 9 | loss: 0.2272674
+	speed: 0.0162s/iter; left time: 76.3657s
+	iters: 700, epoch: 9 | loss: 0.3168534
+	speed: 0.0165s/iter; left time: 75.9386s
+Epoch: 9 cost time: 12.410128831863403
+[DIAGNÓSTICO] Época 9:
+  LR actual: 0.00000704
+  Grad clip: 5.0
+  Norm de gradientes (último batch): 0.125213
+  Norm de pesos: 200.200603
+  Grad norm promedio: 0.182191
+  Grad norm máximo: 1.581097
+Epoch: 9, Steps: 757 | Train Loss: 0.1661715 Vali Loss: 0.0560476 Test Loss: 0.0846392
+EarlyStopping counter: 7 out of 7
+Early stopping
+>>>>>>>testing : ETTm1_96_192_iTransformer_ETTm1_MS_ft96_sl48_ll192_pl128_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 13745
+test shape: (13745, 1, 192, 1) (13745, 1, 192, 1)
+test shape: (13745, 192, 1) (13745, 192, 1)
+mse:0.08093062043190002, mae:0.21443317830562592
+Using MPS device (Apple Silicon GPU)
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=1, channel_independence=False, checkpoints='./checkpoints/', class_strategy='projection', d_ff=1024, d_layers=1, d_model=256, data='ETTm1', data_path='ETTm1.csv', dec_in=7, des='Exp', devices='mps', distil=True, do_predict=False, dropout=0.0, e_layers=4, efficient_training=False, embed='timeF', enc_in=7, exp_name='MTSF', factor=1, features='MS', freq='h', gpu=0, grad_clip=7.0, inverse=False, is_training=1, itr=1, label_len=48, learning_rate=5e-05, loss='MSE', lradj='cosine', model='iTransformer', model_id='ETTm1_96_336', moving_avg=25, n_heads=16, num_workers=0, output_attention=False, partial_start_index=0, patience=10, pred_len=336, root_path='./iTransformer_datasets/ETT-small/', seq_len=96, target='OT', target_data_path='electricity.csv', target_root_path='./data/electricity/', train_epochs=20, use_amp=False, use_gpu=True, use_multi_gpu=False, use_norm=True, warmup_epochs=5, weight_decay=0.0002)
+Use GPU: mps (Apple Silicon)
+>>>>>>>start training : ETTm1_96_336_iTransformer_ETTm1_MS_ft96_sl48_ll336_pl256_dm16_nh4_el1_dl1024_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ETTm1.csv Split Info:
+  Total: 69,680 samples
+  Train: 48,776 samples (70.0%)
+  Val:   7,064 samples (10.1%)
+  Test:  14,032 samples (20.1%)
+train 48345
+val 6633
+test 13601
+Batch stats: mean=0.0612, std=0.9660, min=-3.9923, max=4.5991
+	iters: 100, epoch: 1 | loss: 0.2449530
+	speed: 0.0306s/iter; left time: 921.3398s
+	iters: 200, epoch: 1 | loss: 0.2329983
+	speed: 0.0278s/iter; left time: 834.0512s
+	iters: 300, epoch: 1 | loss: 0.1997680
+	speed: 0.0273s/iter; left time: 815.6505s
+	iters: 400, epoch: 1 | loss: 0.1871227
+	speed: 0.0273s/iter; left time: 813.7682s
+	iters: 500, epoch: 1 | loss: 0.1488346
+	speed: 0.0274s/iter; left time: 814.4347s
+	iters: 600, epoch: 1 | loss: 0.2286404
+	speed: 0.0273s/iter; left time: 806.7037s
+	iters: 700, epoch: 1 | loss: 0.1958692
+	speed: 0.0281s/iter; left time: 827.7028s
+	iters: 800, epoch: 1 | loss: 0.1258909
+	speed: 0.0273s/iter; left time: 801.7817s
+	iters: 900, epoch: 1 | loss: 0.1925248
+	speed: 0.0276s/iter; left time: 808.2508s
+	iters: 1000, epoch: 1 | loss: 0.1604011
+	speed: 0.0275s/iter; left time: 802.0942s
+	iters: 1100, epoch: 1 | loss: 0.1951111
+	speed: 0.0283s/iter; left time: 823.3517s
+	iters: 1200, epoch: 1 | loss: 0.2786549
+	speed: 0.0283s/iter; left time: 821.0650s
+	iters: 1300, epoch: 1 | loss: 0.2537358
+	speed: 0.0278s/iter; left time: 804.7721s
+	iters: 1400, epoch: 1 | loss: 0.2105147
+	speed: 0.0278s/iter; left time: 800.1937s
+	iters: 1500, epoch: 1 | loss: 0.1889126
+	speed: 0.0278s/iter; left time: 799.1206s
+Epoch: 1 cost time: 42.110759258270264
+[DIAGNÓSTICO] Época 1:
+  LR actual: 0.00004970
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 0.035410
+  Norm de pesos: 463.208146
+  Grad norm promedio: 0.047543
+  Grad norm máximo: 0.232355
+Epoch: 1, Steps: 1510 | Train Loss: 0.2070887 Vali Loss: 0.0717871 Test Loss: 0.1185926
+Validation loss decreased (inf --> 0.071787).  Saving model ...
+	iters: 100, epoch: 2 | loss: 0.1815738
+	speed: 0.5428s/iter; left time: 15518.9766s
+	iters: 200, epoch: 2 | loss: 0.3015491
+	speed: 0.0275s/iter; left time: 783.4424s
+	iters: 300, epoch: 2 | loss: 0.1840192
+	speed: 0.0277s/iter; left time: 785.5747s
+	iters: 400, epoch: 2 | loss: 0.1446838
+	speed: 0.0278s/iter; left time: 785.6046s
+	iters: 500, epoch: 2 | loss: 0.2825094
+	speed: 0.0277s/iter; left time: 781.1430s
+	iters: 600, epoch: 2 | loss: 0.1584801
+	speed: 0.0279s/iter; left time: 783.4001s
+	iters: 700, epoch: 2 | loss: 0.2244177
+	speed: 0.0275s/iter; left time: 770.9972s
+	iters: 800, epoch: 2 | loss: 0.2559587
+	speed: 0.0276s/iter; left time: 770.5564s
+	iters: 900, epoch: 2 | loss: 0.1926060
+	speed: 0.0278s/iter; left time: 771.5407s
+	iters: 1000, epoch: 2 | loss: 0.1790766
+	speed: 0.0278s/iter; left time: 769.3624s
+	iters: 1100, epoch: 2 | loss: 0.2242603
+	speed: 0.0278s/iter; left time: 767.1118s
+	iters: 1200, epoch: 2 | loss: 0.2146150
+	speed: 0.0279s/iter; left time: 765.7228s
+	iters: 1300, epoch: 2 | loss: 0.1988545
+	speed: 0.0276s/iter; left time: 755.8097s
+	iters: 1400, epoch: 2 | loss: 0.2233412
+	speed: 0.0279s/iter; left time: 760.7950s
+	iters: 1500, epoch: 2 | loss: 0.2028777
+	speed: 0.0279s/iter; left time: 757.5453s
+Epoch: 2 cost time: 41.8597731590271
+[DIAGNÓSTICO] Época 2:
+  LR actual: 0.00004879
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 0.023646
+  Norm de pesos: 494.380861
+  Grad norm promedio: 0.069693
+  Grad norm máximo: 0.765546
+Epoch: 2, Steps: 1510 | Train Loss: 0.2090151 Vali Loss: 0.0723858 Test Loss: 0.1188317
+EarlyStopping counter: 1 out of 10
+	iters: 100, epoch: 3 | loss: 0.1401181
+	speed: 0.5404s/iter; left time: 14633.8978s
+	iters: 200, epoch: 3 | loss: 0.2111026
+	speed: 0.0278s/iter; left time: 750.2787s
+	iters: 300, epoch: 3 | loss: 0.2721948
+	speed: 0.0278s/iter; left time: 746.3442s
+	iters: 400, epoch: 3 | loss: 0.2008234
+	speed: 0.0279s/iter; left time: 745.8619s
+	iters: 500, epoch: 3 | loss: 0.1557340
+	speed: 0.0277s/iter; left time: 739.7337s
+	iters: 600, epoch: 3 | loss: 0.2016090
+	speed: 0.0279s/iter; left time: 741.7261s
+	iters: 700, epoch: 3 | loss: 0.2087885
+	speed: 0.0278s/iter; left time: 735.7415s
+	iters: 800, epoch: 3 | loss: 0.1755853
+	speed: 0.0278s/iter; left time: 732.3555s
+	iters: 900, epoch: 3 | loss: 0.3021322
+	speed: 0.0276s/iter; left time: 725.0673s
+	iters: 1000, epoch: 3 | loss: 0.2847434
+	speed: 0.0278s/iter; left time: 727.1542s
+	iters: 1100, epoch: 3 | loss: 0.1760285
+	speed: 0.0281s/iter; left time: 733.0728s
+	iters: 1200, epoch: 3 | loss: 0.2641818
+	speed: 0.0280s/iter; left time: 727.6574s
+	iters: 1300, epoch: 3 | loss: 0.2160203
+	speed: 0.0284s/iter; left time: 734.1663s
+	iters: 1400, epoch: 3 | loss: 0.1668639
+	speed: 0.0275s/iter; left time: 709.4926s
+	iters: 1500, epoch: 3 | loss: 0.1741655
+	speed: 0.0285s/iter; left time: 732.1866s
+Epoch: 3 cost time: 42.07479286193848
+[DIAGNÓSTICO] Época 3:
+  LR actual: 0.00004730
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 0.032068
+  Norm de pesos: 523.132962
+  Grad norm promedio: 0.042369
+  Grad norm máximo: 0.290999
+Epoch: 3, Steps: 1510 | Train Loss: 0.2105968 Vali Loss: 0.0729263 Test Loss: 0.1192620
+EarlyStopping counter: 2 out of 10
+	iters: 100, epoch: 4 | loss: 0.1973668
+	speed: 0.5485s/iter; left time: 14024.9010s
+	iters: 200, epoch: 4 | loss: 0.1674227
+	speed: 0.0281s/iter; left time: 715.7975s
+	iters: 300, epoch: 4 | loss: 0.1668782
+	speed: 0.0276s/iter; left time: 699.6028s
+	iters: 400, epoch: 4 | loss: 0.1730765
+	speed: 0.0276s/iter; left time: 697.5488s
+	iters: 500, epoch: 4 | loss: 0.1869889
+	speed: 0.0279s/iter; left time: 703.2199s
+	iters: 600, epoch: 4 | loss: 0.1821413
+	speed: 0.0277s/iter; left time: 694.0042s
+	iters: 700, epoch: 4 | loss: 0.2784725
+	speed: 0.0278s/iter; left time: 695.0945s
+	iters: 800, epoch: 4 | loss: 0.1501454
+	speed: 0.0280s/iter; left time: 696.2791s
+	iters: 900, epoch: 4 | loss: 0.2326083
+	speed: 0.0278s/iter; left time: 688.0019s
+	iters: 1000, epoch: 4 | loss: 0.1941191
+	speed: 0.0280s/iter; left time: 689.8375s
+	iters: 1100, epoch: 4 | loss: 0.1705089
+	speed: 0.0278s/iter; left time: 682.2153s
+	iters: 1200, epoch: 4 | loss: 0.1898056
+	speed: 0.0279s/iter; left time: 682.2055s
+	iters: 1300, epoch: 4 | loss: 0.2229620
+	speed: 0.0278s/iter; left time: 676.8117s
+	iters: 1400, epoch: 4 | loss: 0.2340650
+	speed: 0.0283s/iter; left time: 686.2140s
+	iters: 1500, epoch: 4 | loss: 0.2257822
+	speed: 0.0279s/iter; left time: 674.3704s
+Epoch: 4 cost time: 42.1049280166626
+[DIAGNÓSTICO] Época 4:
+  LR actual: 0.00004527
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 0.020611
+  Norm de pesos: 558.473378
+  Grad norm promedio: 0.055450
+  Grad norm máximo: 2.234910
+Epoch: 4, Steps: 1510 | Train Loss: 0.2115568 Vali Loss: 0.0725276 Test Loss: 0.1183321
+EarlyStopping counter: 3 out of 10
+	iters: 100, epoch: 5 | loss: 0.1577112
+	speed: 0.5404s/iter; left time: 13001.6279s
+	iters: 200, epoch: 5 | loss: 0.2852431
+	speed: 0.0279s/iter; left time: 668.9171s
+	iters: 300, epoch: 5 | loss: 0.1886616
+	speed: 0.0275s/iter; left time: 655.3285s
+	iters: 400, epoch: 5 | loss: 0.1659645
+	speed: 0.0277s/iter; left time: 659.2034s
+	iters: 500, epoch: 5 | loss: 0.1833303
+	speed: 0.0278s/iter; left time: 656.7411s
+	iters: 600, epoch: 5 | loss: 0.2525919
+	speed: 0.0279s/iter; left time: 657.8872s
+	iters: 700, epoch: 5 | loss: 0.1659138
+	speed: 0.0279s/iter; left time: 653.5421s
+	iters: 800, epoch: 5 | loss: 0.2340551
+	speed: 0.0278s/iter; left time: 648.7308s
+	iters: 900, epoch: 5 | loss: 0.1921308
+	speed: 0.0276s/iter; left time: 643.1311s
+	iters: 1000, epoch: 5 | loss: 0.1723029
+	speed: 0.0278s/iter; left time: 643.4036s
+	iters: 1100, epoch: 5 | loss: 0.2191353
+	speed: 0.0280s/iter; left time: 645.1893s
+	iters: 1200, epoch: 5 | loss: 0.1946057
+	speed: 0.0282s/iter; left time: 648.2141s
+	iters: 1300, epoch: 5 | loss: 0.1962788
+	speed: 0.0277s/iter; left time: 634.2039s
+	iters: 1400, epoch: 5 | loss: 0.1652684
+	speed: 0.0276s/iter; left time: 628.9736s
+	iters: 1500, epoch: 5 | loss: 0.1870866
+	speed: 0.0278s/iter; left time: 629.2146s
+Epoch: 5 cost time: 41.979074001312256
+[DIAGNÓSTICO] Época 5:
+  LR actual: 0.00004275
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 0.075589
+  Norm de pesos: 588.758598
+  Grad norm promedio: 0.068105
+  Grad norm máximo: 2.043594
+Epoch: 5, Steps: 1510 | Train Loss: 0.2128096 Vali Loss: 0.0739999 Test Loss: 0.1224424
+EarlyStopping counter: 4 out of 10
+	iters: 100, epoch: 6 | loss: 0.2382841
+	speed: 0.5408s/iter; left time: 12196.1669s
+	iters: 200, epoch: 6 | loss: 0.1598606
+	speed: 0.0278s/iter; left time: 623.7357s
+	iters: 300, epoch: 6 | loss: 0.2022614
+	speed: 0.0278s/iter; left time: 621.2304s
+	iters: 400, epoch: 6 | loss: 0.2090112
+	speed: 0.0275s/iter; left time: 611.5211s
+	iters: 500, epoch: 6 | loss: 0.2237403
+	speed: 0.0277s/iter; left time: 614.0514s
+	iters: 600, epoch: 6 | loss: 0.2814071
+	speed: 0.0279s/iter; left time: 615.4262s
+	iters: 700, epoch: 6 | loss: 0.1808906
+	speed: 0.0277s/iter; left time: 608.1869s
+	iters: 800, epoch: 6 | loss: 0.2309711
+	speed: 0.0277s/iter; left time: 605.4881s
+	iters: 900, epoch: 6 | loss: 0.2314723
+	speed: 0.0277s/iter; left time: 601.5981s
+	iters: 1000, epoch: 6 | loss: 0.2134388
+	speed: 0.0277s/iter; left time: 598.9998s
+	iters: 1100, epoch: 6 | loss: 0.1899395
+	speed: 0.0279s/iter; left time: 601.6970s
+	iters: 1200, epoch: 6 | loss: 0.1819511
+	speed: 0.0284s/iter; left time: 608.1719s
+	iters: 1300, epoch: 6 | loss: 0.2853302
+	speed: 0.0276s/iter; left time: 588.5470s
+	iters: 1400, epoch: 6 | loss: 0.2280811
+	speed: 0.0277s/iter; left time: 588.7434s
+	iters: 1500, epoch: 6 | loss: 0.2194452
+	speed: 0.0276s/iter; left time: 584.6128s
+Epoch: 6 cost time: 41.90589690208435
+[DIAGNÓSTICO] Época 6:
+  LR actual: 0.00003980
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 0.030403
+  Norm de pesos: 624.733915
+  Grad norm promedio: 0.078492
+  Grad norm máximo: 1.549517
+Epoch: 6, Steps: 1510 | Train Loss: 0.2126011 Vali Loss: 0.0728756 Test Loss: 0.1197153
+EarlyStopping counter: 5 out of 10
+	iters: 100, epoch: 7 | loss: 0.1672017
+	speed: 0.5415s/iter; left time: 11393.6344s
+	iters: 200, epoch: 7 | loss: 0.1798404
+	speed: 0.0279s/iter; left time: 584.1904s
+	iters: 300, epoch: 7 | loss: 0.2404779
+	speed: 0.0280s/iter; left time: 582.7438s
+	iters: 400, epoch: 7 | loss: 0.2461148
+	speed: 0.0279s/iter; left time: 579.3619s
+	iters: 500, epoch: 7 | loss: 0.1876641
+	speed: 0.0276s/iter; left time: 569.6365s
+	iters: 600, epoch: 7 | loss: 0.2050434
+	speed: 0.0278s/iter; left time: 571.4876s
+	iters: 700, epoch: 7 | loss: 0.1913753
+	speed: 0.0280s/iter; left time: 572.4300s
+	iters: 800, epoch: 7 | loss: 0.2192436
+	speed: 0.0279s/iter; left time: 567.0257s
+	iters: 900, epoch: 7 | loss: 0.1462268
+	speed: 0.0277s/iter; left time: 560.8185s
+	iters: 1000, epoch: 7 | loss: 0.1802071
+	speed: 0.0277s/iter; left time: 557.5182s
+	iters: 1100, epoch: 7 | loss: 0.2218380
+	speed: 0.0277s/iter; left time: 554.9854s
+	iters: 1200, epoch: 7 | loss: 0.1760945
+	speed: 0.0278s/iter; left time: 554.4878s
+	iters: 1300, epoch: 7 | loss: 0.1961227
+	speed: 0.0279s/iter; left time: 553.2059s
+	iters: 1400, epoch: 7 | loss: 0.2204547
+	speed: 0.0277s/iter; left time: 546.4038s
+	iters: 1500, epoch: 7 | loss: 0.1457602
+	speed: 0.0279s/iter; left time: 548.4965s
+Epoch: 7 cost time: 42.020776987075806
+[DIAGNÓSTICO] Época 7:
+  LR actual: 0.00003649
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 0.015379
+  Norm de pesos: 655.522638
+  Grad norm promedio: 0.049459
+  Grad norm máximo: 4.136786
+Epoch: 7, Steps: 1510 | Train Loss: 0.2121251 Vali Loss: 0.0726658 Test Loss: 0.1190153
+EarlyStopping counter: 6 out of 10
+	iters: 100, epoch: 8 | loss: 0.2887068
+	speed: 0.5372s/iter; left time: 10492.6511s
+	iters: 200, epoch: 8 | loss: 0.3113288
+	speed: 0.0276s/iter; left time: 536.3588s
+	iters: 300, epoch: 8 | loss: 0.3142452
+	speed: 0.0280s/iter; left time: 540.7768s
+	iters: 400, epoch: 8 | loss: 0.1789910
+	speed: 0.0277s/iter; left time: 533.5189s
+	iters: 500, epoch: 8 | loss: 0.2991814
+	speed: 0.0277s/iter; left time: 529.2286s
+	iters: 600, epoch: 8 | loss: 0.2668407
+	speed: 0.0280s/iter; left time: 533.0142s
+	iters: 700, epoch: 8 | loss: 0.1501345
+	speed: 0.0280s/iter; left time: 529.8721s
+	iters: 800, epoch: 8 | loss: 0.2439030
+	speed: 0.0278s/iter; left time: 524.2660s
+	iters: 900, epoch: 8 | loss: 0.3298221
+	speed: 0.0281s/iter; left time: 526.0787s
+	iters: 1000, epoch: 8 | loss: 0.2538765
+	speed: 0.0279s/iter; left time: 518.9928s
+	iters: 1100, epoch: 8 | loss: 0.1734376
+	speed: 0.0278s/iter; left time: 514.5207s
+	iters: 1200, epoch: 8 | loss: 0.2061290
+	speed: 0.0277s/iter; left time: 510.1886s
+	iters: 1300, epoch: 8 | loss: 0.2135699
+	speed: 0.0280s/iter; left time: 513.0810s
+	iters: 1400, epoch: 8 | loss: 0.1962195
+	speed: 0.0280s/iter; left time: 510.5604s
+	iters: 1500, epoch: 8 | loss: 0.1563392
+	speed: 0.0278s/iter; left time: 503.1766s
+Epoch: 8 cost time: 42.0140540599823
+[DIAGNÓSTICO] Época 8:
+  LR actual: 0.00003290
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 0.059018
+  Norm de pesos: 685.731356
+  Grad norm promedio: 0.044139
+  Grad norm máximo: 1.168703
+Epoch: 8, Steps: 1510 | Train Loss: 0.2117434 Vali Loss: 0.0722445 Test Loss: 0.1186944
+EarlyStopping counter: 7 out of 10
+	iters: 100, epoch: 9 | loss: 0.2426083
+	speed: 0.5360s/iter; left time: 9660.0709s
+	iters: 200, epoch: 9 | loss: 0.2394670
+	speed: 0.0274s/iter; left time: 491.6269s
+	iters: 300, epoch: 9 | loss: 0.1502496
+	speed: 0.0277s/iter; left time: 494.0808s
+	iters: 400, epoch: 9 | loss: 0.2084056
+	speed: 0.0276s/iter; left time: 488.5591s
+	iters: 500, epoch: 9 | loss: 0.2062855
+	speed: 0.0277s/iter; left time: 488.7435s
+	iters: 600, epoch: 9 | loss: 0.1456934
+	speed: 0.0277s/iter; left time: 485.0498s
+	iters: 700, epoch: 9 | loss: 0.1788069
+	speed: 0.0279s/iter; left time: 485.6684s
+	iters: 800, epoch: 9 | loss: 0.1429023
+	speed: 0.0280s/iter; left time: 485.7593s
+	iters: 900, epoch: 9 | loss: 0.2153192
+	speed: 0.0277s/iter; left time: 477.3294s
+	iters: 1000, epoch: 9 | loss: 0.1285317
+	speed: 0.0279s/iter; left time: 477.7425s
+	iters: 1100, epoch: 9 | loss: 0.2227045
+	speed: 0.0278s/iter; left time: 473.8219s
+	iters: 1200, epoch: 9 | loss: 0.2735486
+	speed: 0.0278s/iter; left time: 469.7972s
+	iters: 1300, epoch: 9 | loss: 0.1967362
+	speed: 0.0276s/iter; left time: 465.0002s
+	iters: 1400, epoch: 9 | loss: 0.1874678
+	speed: 0.0276s/iter; left time: 461.0322s
+	iters: 1500, epoch: 9 | loss: 0.2413903
+	speed: 0.0277s/iter; left time: 460.5452s
+Epoch: 9 cost time: 41.847293853759766
+[DIAGNÓSTICO] Época 9:
+  LR actual: 0.00002912
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 8.458409
+  Norm de pesos: 708.648477
+  Grad norm promedio: 10.738152
+  Grad norm máximo: 315.966339
+Epoch: 9, Steps: 1510 | Train Loss: 0.2136716 Vali Loss: 0.0720820 Test Loss: 0.1184818
+EarlyStopping counter: 8 out of 10
+	iters: 100, epoch: 10 | loss: 0.1541176
+	speed: 0.5355s/iter; left time: 8841.0455s
+	iters: 200, epoch: 10 | loss: 0.1926582
+	speed: 0.0276s/iter; left time: 453.6329s
+	iters: 300, epoch: 10 | loss: 0.1767991
+	speed: 0.0277s/iter; left time: 452.0793s
+	iters: 400, epoch: 10 | loss: 0.2165140
+	speed: 0.0276s/iter; left time: 447.0469s
+	iters: 500, epoch: 10 | loss: 0.1828056
+	speed: 0.0275s/iter; left time: 443.2666s
+	iters: 600, epoch: 10 | loss: 0.1723106
+	speed: 0.0278s/iter; left time: 445.4060s
+	iters: 700, epoch: 10 | loss: 0.1937514
+	speed: 0.0275s/iter; left time: 438.0604s
+	iters: 800, epoch: 10 | loss: 0.2518148
+	speed: 0.0287s/iter; left time: 453.0455s
+	iters: 900, epoch: 10 | loss: 0.1712114
+	speed: 0.0275s/iter; left time: 432.7463s
+	iters: 1000, epoch: 10 | loss: 0.1815995
+	speed: 0.0285s/iter; left time: 445.3028s
+	iters: 1100, epoch: 10 | loss: 0.1955628
+	speed: 0.0274s/iter; left time: 425.3834s
+	iters: 1200, epoch: 10 | loss: 0.1823593
+	speed: 0.0277s/iter; left time: 426.3028s
+	iters: 1300, epoch: 10 | loss: 0.2405917
+	speed: 0.0278s/iter; left time: 424.9804s
+	iters: 1400, epoch: 10 | loss: 0.2285439
+	speed: 0.0278s/iter; left time: 422.8044s
+	iters: 1500, epoch: 10 | loss: 0.1708250
+	speed: 0.0282s/iter; left time: 425.5004s
+Epoch: 10 cost time: 41.993101835250854
+[DIAGNÓSTICO] Época 10:
+  LR actual: 0.00002525
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 3.613609
+  Norm de pesos: 725.615921
+  Grad norm promedio: 4.481622
+  Grad norm máximo: 82.587357
+Epoch: 10, Steps: 1510 | Train Loss: 0.2106883 Vali Loss: 0.0721095 Test Loss: 0.1182025
+EarlyStopping counter: 9 out of 10
+	iters: 100, epoch: 11 | loss: 0.2323108
+	speed: 6.5331s/iter; left time: 98002.8388s
+	iters: 200, epoch: 11 | loss: 0.2232862
+	speed: 0.0275s/iter; left time: 410.0043s
+	iters: 300, epoch: 11 | loss: 0.2227752
+	speed: 0.0290s/iter; left time: 429.6987s
+	iters: 400, epoch: 11 | loss: 0.1655863
+	speed: 0.0276s/iter; left time: 405.2075s
+	iters: 500, epoch: 11 | loss: 0.1687269
+	speed: 0.0282s/iter; left time: 412.4431s
+	iters: 600, epoch: 11 | loss: 0.1820289
+	speed: 0.0279s/iter; left time: 404.0032s
+	iters: 700, epoch: 11 | loss: 0.2021199
+	speed: 0.0274s/iter; left time: 394.8823s
+	iters: 800, epoch: 11 | loss: 0.2064527
+	speed: 0.0280s/iter; left time: 400.5204s
+	iters: 900, epoch: 11 | loss: 0.1586435
+	speed: 0.0281s/iter; left time: 398.8683s
+	iters: 1000, epoch: 11 | loss: 0.2537105
+	speed: 0.0273s/iter; left time: 384.4762s
+	iters: 1100, epoch: 11 | loss: 0.1896242
+	speed: 0.0272s/iter; left time: 380.2597s
+	iters: 1200, epoch: 11 | loss: 0.3007239
+	speed: 0.0277s/iter; left time: 385.6051s
+	iters: 1300, epoch: 11 | loss: 0.2187353
+	speed: 0.0275s/iter; left time: 378.9448s
+	iters: 1400, epoch: 11 | loss: 0.2787645
+	speed: 0.0275s/iter; left time: 377.3236s
+	iters: 1500, epoch: 11 | loss: 0.1269453
+	speed: 0.0275s/iter; left time: 374.1657s
+Epoch: 11 cost time: 41.90713596343994
+[DIAGNÓSTICO] Época 11:
+  LR actual: 0.00002138
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 4.793505
+  Norm de pesos: 738.633046
+  Grad norm promedio: 5.241217
+  Grad norm máximo: 90.406822
+Epoch: 11, Steps: 1510 | Train Loss: 0.2101630 Vali Loss: 0.0717290 Test Loss: 0.1183739
+Validation loss decreased (0.071787 --> 0.071729).  Saving model ...
+	iters: 100, epoch: 12 | loss: 0.1977917
+	speed: 0.5512s/iter; left time: 7435.6373s
+	iters: 200, epoch: 12 | loss: 0.2024270
+	speed: 0.0275s/iter; left time: 367.7015s
+	iters: 300, epoch: 12 | loss: 0.1677850
+	speed: 0.0276s/iter; left time: 366.7327s
+	iters: 400, epoch: 12 | loss: 0.2000726
+	speed: 0.0279s/iter; left time: 368.1298s
+	iters: 500, epoch: 12 | loss: 0.1734957
+	speed: 0.0284s/iter; left time: 371.4477s
+	iters: 600, epoch: 12 | loss: 0.1764442
+	speed: 0.0286s/iter; left time: 370.9121s
+	iters: 700, epoch: 12 | loss: 0.2090582
+	speed: 0.0282s/iter; left time: 364.1101s
+	iters: 800, epoch: 12 | loss: 0.2352134
+	speed: 0.0281s/iter; left time: 359.8972s
+	iters: 900, epoch: 12 | loss: 0.1778566
+	speed: 0.0282s/iter; left time: 357.2965s
+	iters: 1000, epoch: 12 | loss: 0.1838955
+	speed: 0.0280s/iter; left time: 352.4397s
+	iters: 1100, epoch: 12 | loss: 0.1722832
+	speed: 0.0283s/iter; left time: 353.3141s
+	iters: 1200, epoch: 12 | loss: 0.1592846
+	speed: 0.0283s/iter; left time: 350.7467s
+	iters: 1300, epoch: 12 | loss: 0.2089998
+	speed: 0.0281s/iter; left time: 344.7636s
+	iters: 1400, epoch: 12 | loss: 0.2112462
+	speed: 0.0280s/iter; left time: 340.7395s
+	iters: 1500, epoch: 12 | loss: 0.2219342
+	speed: 0.0283s/iter; left time: 341.7166s
+Epoch: 12 cost time: 42.45704770088196
+[DIAGNÓSTICO] Época 12:
+  LR actual: 0.00001760
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 6.710897
+  Norm de pesos: 749.137767
+  Grad norm promedio: 5.912512
+  Grad norm máximo: 61.399189
+Epoch: 12, Steps: 1510 | Train Loss: 0.2092376 Vali Loss: 0.0716344 Test Loss: 0.1184656
+Validation loss decreased (0.071729 --> 0.071634).  Saving model ...
+	iters: 100, epoch: 13 | loss: 0.2027936
+	speed: 0.5410s/iter; left time: 6481.8959s
+	iters: 200, epoch: 13 | loss: 0.2191873
+	speed: 0.0275s/iter; left time: 326.9509s
+	iters: 300, epoch: 13 | loss: 0.3112512
+	speed: 0.0278s/iter; left time: 327.4423s
+	iters: 400, epoch: 13 | loss: 0.1797208
+	speed: 0.0276s/iter; left time: 322.5160s
+	iters: 500, epoch: 13 | loss: 0.1834332
+	speed: 0.0279s/iter; left time: 322.5669s
+	iters: 600, epoch: 13 | loss: 0.3021045
+	speed: 0.0282s/iter; left time: 324.0969s
+	iters: 700, epoch: 13 | loss: 0.1632820
+	speed: 0.0281s/iter; left time: 319.3718s
+	iters: 800, epoch: 13 | loss: 0.2357922
+	speed: 0.0278s/iter; left time: 313.2974s
+	iters: 900, epoch: 13 | loss: 0.1962546
+	speed: 0.0279s/iter; left time: 312.1925s
+	iters: 1000, epoch: 13 | loss: 0.1315679
+	speed: 0.0279s/iter; left time: 308.6578s
+	iters: 1100, epoch: 13 | loss: 0.2819480
+	speed: 0.0277s/iter; left time: 304.0686s
+	iters: 1200, epoch: 13 | loss: 0.2111539
+	speed: 0.0280s/iter; left time: 304.3930s
+	iters: 1300, epoch: 13 | loss: 0.3075249
+	speed: 0.0280s/iter; left time: 302.1463s
+	iters: 1400, epoch: 13 | loss: 0.1586059
+	speed: 0.0274s/iter; left time: 292.7200s
+	iters: 1500, epoch: 13 | loss: 0.1740748
+	speed: 0.0282s/iter; left time: 298.8338s
+Epoch: 13 cost time: 42.06757998466492
+[DIAGNÓSTICO] Época 13:
+  LR actual: 0.00001401
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 6.866440
+  Norm de pesos: 757.710542
+  Grad norm promedio: 8.845068
+  Grad norm máximo: 2851.534668
+Epoch: 13, Steps: 1510 | Train Loss: 0.2092015 Vali Loss: 0.0714786 Test Loss: 0.1188921
+Validation loss decreased (0.071634 --> 0.071479).  Saving model ...
+	iters: 100, epoch: 14 | loss: 0.2183261
+	speed: 0.5399s/iter; left time: 5653.0993s
+	iters: 200, epoch: 14 | loss: 0.2191477
+	speed: 0.0273s/iter; left time: 282.8877s
+	iters: 300, epoch: 14 | loss: 0.2320938
+	speed: 0.0287s/iter; left time: 294.5050s
+	iters: 400, epoch: 14 | loss: 0.1433301
+	speed: 0.0281s/iter; left time: 286.0155s
+	iters: 500, epoch: 14 | loss: 0.1763888
+	speed: 0.0279s/iter; left time: 281.4422s
+	iters: 600, epoch: 14 | loss: 0.1422682
+	speed: 0.0281s/iter; left time: 279.7402s
+	iters: 700, epoch: 14 | loss: 0.2116723
+	speed: 0.0278s/iter; left time: 274.0456s
+	iters: 800, epoch: 14 | loss: 0.1691061
+	speed: 0.0279s/iter; left time: 272.5537s
+	iters: 900, epoch: 14 | loss: 0.2309218
+	speed: 0.0277s/iter; left time: 268.2390s
+	iters: 1000, epoch: 14 | loss: 0.1603642
+	speed: 0.0277s/iter; left time: 265.2865s
+	iters: 1100, epoch: 14 | loss: 0.2506203
+	speed: 0.0277s/iter; left time: 262.4694s
+	iters: 1200, epoch: 14 | loss: 0.1823850
+	speed: 0.0277s/iter; left time: 259.1972s
+	iters: 1300, epoch: 14 | loss: 0.2244834
+	speed: 0.0279s/iter; left time: 258.5112s
+	iters: 1400, epoch: 14 | loss: 0.2095304
+	speed: 0.0279s/iter; left time: 255.7939s
+	iters: 1500, epoch: 14 | loss: 0.2025341
+	speed: 0.0282s/iter; left time: 255.4014s
+Epoch: 14 cost time: 42.125306844711304
+[DIAGNÓSTICO] Época 14:
+  LR actual: 0.00001070
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 806.437988
+  Norm de pesos: 763.483556
+  Grad norm promedio: 927.011411
+  Grad norm máximo: 99619.578125
+Epoch: 14, Steps: 1510 | Train Loss: 0.2093996 Vali Loss: 0.0716824 Test Loss: 0.1185452
+EarlyStopping counter: 1 out of 10
+	iters: 100, epoch: 15 | loss: 0.1919031
+	speed: 0.5422s/iter; left time: 4859.0927s
+	iters: 200, epoch: 15 | loss: 0.3118186
+	speed: 0.0276s/iter; left time: 244.5782s
+	iters: 300, epoch: 15 | loss: 0.2309195
+	speed: 0.0278s/iter; left time: 243.2905s
+	iters: 400, epoch: 15 | loss: 0.1370158
+	speed: 0.0279s/iter; left time: 241.3622s
+	iters: 500, epoch: 15 | loss: 0.2020877
+	speed: 0.0282s/iter; left time: 241.6563s
+	iters: 600, epoch: 15 | loss: 0.2191934
+	speed: 0.0276s/iter; left time: 233.6124s
+	iters: 700, epoch: 15 | loss: 0.2065230
+	speed: 0.0276s/iter; left time: 230.6044s
+	iters: 800, epoch: 15 | loss: 0.2615608
+	speed: 0.0277s/iter; left time: 228.6712s
+	iters: 900, epoch: 15 | loss: 0.1698012
+	speed: 0.0278s/iter; left time: 226.9309s
+	iters: 1000, epoch: 15 | loss: 0.2823418
+	speed: 0.0276s/iter; left time: 222.8056s
+	iters: 1100, epoch: 15 | loss: 0.1744503
+	speed: 0.0275s/iter; left time: 219.1823s
+	iters: 1200, epoch: 15 | loss: 0.3419441
+	speed: 0.0279s/iter; left time: 219.3709s
+	iters: 1300, epoch: 15 | loss: 0.1556834
+	speed: 0.0281s/iter; left time: 217.8878s
+	iters: 1400, epoch: 15 | loss: 0.2011476
+	speed: 0.0278s/iter; left time: 213.1589s
+	iters: 1500, epoch: 15 | loss: 0.1712912
+	speed: 0.0278s/iter; left time: 210.2660s
+Epoch: 15 cost time: 41.940659046173096
+[DIAGNÓSTICO] Época 15:
+  LR actual: 0.00000775
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 118.455414
+  Norm de pesos: 764.704887
+  Grad norm promedio: 1523.957041
+  Grad norm máximo: 45937.933594
+Epoch: 15, Steps: 1510 | Train Loss: 0.2133929 Vali Loss: 0.0734428 Test Loss: 0.1230067
+EarlyStopping counter: 2 out of 10
+	iters: 100, epoch: 16 | loss: 0.2021336
+	speed: 0.5435s/iter; left time: 4049.5329s
+	iters: 200, epoch: 16 | loss: 0.2345885
+	speed: 0.0277s/iter; left time: 203.2571s
+	iters: 300, epoch: 16 | loss: 0.2331529
+	speed: 0.0274s/iter; left time: 198.8533s
+	iters: 400, epoch: 16 | loss: 0.3517602
+	speed: 0.0276s/iter; left time: 197.5750s
+	iters: 500, epoch: 16 | loss: 0.2477049
+	speed: 0.0279s/iter; left time: 196.4981s
+	iters: 600, epoch: 16 | loss: 0.2114534
+	speed: 0.0281s/iter; left time: 195.4674s
+	iters: 700, epoch: 16 | loss: 0.2140640
+	speed: 0.0276s/iter; left time: 189.2902s
+	iters: 800, epoch: 16 | loss: 0.3010974
+	speed: 0.0275s/iter; left time: 185.6524s
+	iters: 900, epoch: 16 | loss: 0.2259420
+	speed: 0.0276s/iter; left time: 183.6975s
+	iters: 1000, epoch: 16 | loss: 0.2463089
+	speed: 0.0278s/iter; left time: 181.8826s
+	iters: 1100, epoch: 16 | loss: 0.1769965
+	speed: 0.0278s/iter; left time: 179.5855s
+	iters: 1200, epoch: 16 | loss: 0.2527634
+	speed: 0.0280s/iter; left time: 177.6233s
+	iters: 1300, epoch: 16 | loss: 0.2018427
+	speed: 0.0275s/iter; left time: 172.0628s
+	iters: 1400, epoch: 16 | loss: 0.3559001
+	speed: 0.0278s/iter; left time: 170.8256s
+	iters: 1500, epoch: 16 | loss: 0.1316999
+	speed: 0.0278s/iter; left time: 168.0110s
+Epoch: 16 cost time: 41.85716676712036
+[DIAGNÓSTICO] Época 16:
+  LR actual: 0.00000523
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 15.921200
+  Norm de pesos: 766.886588
+  Grad norm promedio: 435.777977
+  Grad norm máximo: 21492.867188
+Epoch: 16, Steps: 1510 | Train Loss: 0.2124226 Vali Loss: 0.0720585 Test Loss: 0.1189095
+EarlyStopping counter: 3 out of 10
+	iters: 100, epoch: 17 | loss: 0.2073749
+	speed: 0.5402s/iter; left time: 3209.3863s
+	iters: 200, epoch: 17 | loss: 0.1657176
+	speed: 0.0277s/iter; left time: 161.6162s
+	iters: 300, epoch: 17 | loss: 0.2505384
+	speed: 0.0280s/iter; left time: 160.9292s
+	iters: 400, epoch: 17 | loss: 0.1547420
+	speed: 0.0279s/iter; left time: 157.1163s
+	iters: 500, epoch: 17 | loss: 0.2423398
+	speed: 0.0278s/iter; left time: 154.2087s
+	iters: 600, epoch: 17 | loss: 0.1726817
+	speed: 0.0279s/iter; left time: 151.6676s
+	iters: 700, epoch: 17 | loss: 0.1523532
+	speed: 0.0277s/iter; left time: 148.0447s
+	iters: 800, epoch: 17 | loss: 0.1757941
+	speed: 0.0279s/iter; left time: 146.0117s
+	iters: 900, epoch: 17 | loss: 0.3047908
+	speed: 0.0275s/iter; left time: 141.1785s
+	iters: 1000, epoch: 17 | loss: 0.1921747
+	speed: 0.0281s/iter; left time: 141.4847s
+	iters: 1100, epoch: 17 | loss: 0.1612889
+	speed: 0.0277s/iter; left time: 137.0089s
+	iters: 1200, epoch: 17 | loss: 0.2393420
+	speed: 0.0276s/iter; left time: 133.6807s
+	iters: 1300, epoch: 17 | loss: 0.1988633
+	speed: 0.0278s/iter; left time: 131.7318s
+	iters: 1400, epoch: 17 | loss: 0.1975583
+	speed: 0.0277s/iter; left time: 128.5314s
+	iters: 1500, epoch: 17 | loss: 0.1910396
+	speed: 0.0277s/iter; left time: 125.5661s
+Epoch: 17 cost time: 41.980881214141846
+[DIAGNÓSTICO] Época 17:
+  LR actual: 0.00000320
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 220.541855
+  Norm de pesos: 769.292557
+  Grad norm promedio: 259.515475
+  Grad norm máximo: 40845.703125
+Epoch: 17, Steps: 1510 | Train Loss: 0.2102069 Vali Loss: 0.0717848 Test Loss: 0.1186806
+EarlyStopping counter: 4 out of 10
+	iters: 100, epoch: 18 | loss: 0.1855243
+	speed: 0.5407s/iter; left time: 2395.9850s
+	iters: 200, epoch: 18 | loss: 0.2326609
+	speed: 0.0277s/iter; left time: 119.9590s
+	iters: 300, epoch: 18 | loss: 0.1359649
+	speed: 0.0277s/iter; left time: 117.3205s
+	iters: 400, epoch: 18 | loss: 0.2263892
+	speed: 0.0277s/iter; left time: 114.2669s
+	iters: 500, epoch: 18 | loss: 0.1673161
+	speed: 0.0276s/iter; left time: 111.3123s
+	iters: 600, epoch: 18 | loss: 0.2114785
+	speed: 0.0276s/iter; left time: 108.6319s
+	iters: 700, epoch: 18 | loss: 0.1637918
+	speed: 0.0275s/iter; left time: 105.5418s
+	iters: 800, epoch: 18 | loss: 0.2467840
+	speed: 0.0276s/iter; left time: 103.0496s
+	iters: 900, epoch: 18 | loss: 0.2982857
+	speed: 0.0278s/iter; left time: 100.8357s
+	iters: 1000, epoch: 18 | loss: 0.1832834
+	speed: 0.0276s/iter; left time: 97.5719s
+	iters: 1100, epoch: 18 | loss: 0.1844337
+	speed: 0.0276s/iter; left time: 94.6216s
+	iters: 1200, epoch: 18 | loss: 0.2539709
+	speed: 0.0280s/iter; left time: 93.3332s
+	iters: 1300, epoch: 18 | loss: 0.2120276
+	speed: 0.0280s/iter; left time: 90.5764s
+	iters: 1400, epoch: 18 | loss: 0.1759931
+	speed: 0.0279s/iter; left time: 87.2444s
+	iters: 1500, epoch: 18 | loss: 0.1874653
+	speed: 0.0284s/iter; left time: 85.9449s
+Epoch: 18 cost time: 41.950135231018066
+[DIAGNÓSTICO] Época 18:
+  LR actual: 0.00000171
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 6.875033
+  Norm de pesos: 770.610057
+  Grad norm promedio: 239.235071
+  Grad norm máximo: 15915.788086
+Epoch: 18, Steps: 1510 | Train Loss: 0.2098544 Vali Loss: 0.0716861 Test Loss: 0.1190227
+EarlyStopping counter: 5 out of 10
+	iters: 100, epoch: 19 | loss: 0.1895490
+	speed: 0.5440s/iter; left time: 1588.9092s
+	iters: 200, epoch: 19 | loss: 0.2185540
+	speed: 0.0277s/iter; left time: 78.0164s
+	iters: 300, epoch: 19 | loss: 0.2548642
+	speed: 0.0281s/iter; left time: 76.3786s
+	iters: 400, epoch: 19 | loss: 0.1991526
+	speed: 0.0278s/iter; left time: 72.9659s
+	iters: 500, epoch: 19 | loss: 0.2462272
+	speed: 0.0276s/iter; left time: 69.6130s
+	iters: 600, epoch: 19 | loss: 0.2955256
+	speed: 0.0275s/iter; left time: 66.5245s
+	iters: 700, epoch: 19 | loss: 0.1636823
+	speed: 0.0275s/iter; left time: 63.8015s
+	iters: 800, epoch: 19 | loss: 0.1877370
+	speed: 0.0281s/iter; left time: 62.3417s
+	iters: 900, epoch: 19 | loss: 0.1243575
+	speed: 0.0277s/iter; left time: 58.7731s
+	iters: 1000, epoch: 19 | loss: 0.1490060
+	speed: 0.0276s/iter; left time: 55.8277s
+	iters: 1100, epoch: 19 | loss: 0.3420413
+	speed: 0.0276s/iter; left time: 53.0400s
+	iters: 1200, epoch: 19 | loss: 0.2160503
+	speed: 0.0275s/iter; left time: 50.0922s
+	iters: 1300, epoch: 19 | loss: 0.1703817
+	speed: 0.0278s/iter; left time: 47.8208s
+	iters: 1400, epoch: 19 | loss: 0.2748176
+	speed: 0.0276s/iter; left time: 44.7573s
+	iters: 1500, epoch: 19 | loss: 0.2711031
+	speed: 0.0279s/iter; left time: 42.4694s
+Epoch: 19 cost time: 41.87169694900513
+[DIAGNÓSTICO] Época 19:
+  LR actual: 0.00000080
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 12.372461
+  Norm de pesos: 771.202674
+  Grad norm promedio: 254.156632
+  Grad norm máximo: 28356.208984
+Epoch: 19, Steps: 1510 | Train Loss: 0.2098773 Vali Loss: 0.0716897 Test Loss: 0.1190553
+EarlyStopping counter: 6 out of 10
+	iters: 100, epoch: 20 | loss: 0.2712415
+	speed: 0.5402s/iter; left time: 762.1940s
+	iters: 200, epoch: 20 | loss: 0.2578037
+	speed: 0.0274s/iter; left time: 35.8830s
+	iters: 300, epoch: 20 | loss: 0.2237142
+	speed: 0.0276s/iter; left time: 33.4190s
+	iters: 400, epoch: 20 | loss: 0.2118918
+	speed: 0.0282s/iter; left time: 31.2821s
+	iters: 500, epoch: 20 | loss: 0.1302377
+	speed: 0.0297s/iter; left time: 30.0370s
+	iters: 600, epoch: 20 | loss: 0.2255488
+	speed: 0.0292s/iter; left time: 26.6424s
+	iters: 700, epoch: 20 | loss: 0.1825494
+	speed: 0.0277s/iter; left time: 22.4516s
+	iters: 800, epoch: 20 | loss: 0.2211596
+	speed: 0.0288s/iter; left time: 20.4468s
+	iters: 900, epoch: 20 | loss: 0.1607364
+	speed: 0.0285s/iter; left time: 17.4200s
+	iters: 1000, epoch: 20 | loss: 0.2716969
+	speed: 0.0289s/iter; left time: 14.7463s
+	iters: 1100, epoch: 20 | loss: 0.2010275
+	speed: 0.0277s/iter; left time: 11.3945s
+	iters: 1200, epoch: 20 | loss: 0.2830335
+	speed: 0.0277s/iter; left time: 8.6131s
+	iters: 1300, epoch: 20 | loss: 0.1860140
+	speed: 0.0279s/iter; left time: 5.8766s
+	iters: 1400, epoch: 20 | loss: 0.1386605
+	speed: 0.0277s/iter; left time: 3.0718s
+	iters: 1500, epoch: 20 | loss: 0.2263478
+	speed: 0.0277s/iter; left time: 0.3049s
+Epoch: 20 cost time: 42.48936915397644
+[DIAGNÓSTICO] Época 20:
+  LR actual: 0.00000050
+  Grad clip: 7.0
+  Norm de gradientes (último batch): 15.262182
+  Norm de pesos: 771.496892
+  Grad norm promedio: 246.561610
+  Grad norm máximo: 22135.214844
+Epoch: 20, Steps: 1510 | Train Loss: 0.2096301 Vali Loss: 0.0716613 Test Loss: 0.1189521
+EarlyStopping counter: 7 out of 10
+>>>>>>>testing : ETTm1_96_336_iTransformer_ETTm1_MS_ft96_sl48_ll336_pl256_dm16_nh4_el1_dl1024_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 13601
+test shape: (13601, 1, 336, 1) (13601, 1, 336, 1)
+test shape: (13601, 336, 1) (13601, 336, 1)
+mse:0.11889202147722244, mae:0.2628220319747925
+Using MPS device (Apple Silicon GPU)
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=1, channel_independence=False, checkpoints='./checkpoints/', class_strategy='projection', d_ff=1024, d_layers=1, d_model=256, data='ETTm1', data_path='ETTm1.csv', dec_in=7, des='Exp', devices='mps', distil=True, do_predict=False, dropout=0.0, e_layers=4, efficient_training=False, embed='timeF', enc_in=7, exp_name='MTSF', factor=1, features='MS', freq='h', gpu=0, grad_clip=10.0, inverse=False, is_training=1, itr=1, label_len=48, learning_rate=5e-05, loss='MSE', lradj='cosine', model='iTransformer', model_id='ETTm1_96_720', moving_avg=25, n_heads=16, num_workers=0, output_attention=False, partial_start_index=0, patience=15, pred_len=720, root_path='./iTransformer_datasets/ETT-small/', seq_len=96, target='OT', target_data_path='electricity.csv', target_root_path='./data/electricity/', train_epochs=30, use_amp=False, use_gpu=True, use_multi_gpu=False, use_norm=True, warmup_epochs=5, weight_decay=0.0003)
+Use GPU: mps (Apple Silicon)
+>>>>>>>start training : ETTm1_96_720_iTransformer_ETTm1_MS_ft96_sl48_ll720_pl256_dm16_nh4_el1_dl1024_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ETTm1.csv Split Info:
+  Total: 69,680 samples
+  Train: 48,776 samples (70.0%)
+  Val:   7,064 samples (10.1%)
+  Test:  14,032 samples (20.1%)
+train 47961
+val 6249
+test 13217
+Batch stats: mean=-0.1277, std=0.9629, min=-4.1075, max=3.6323
+	iters: 100, epoch: 1 | loss: 0.2782720
+	speed: 0.0319s/iter; left time: 1429.7590s
+	iters: 200, epoch: 1 | loss: 0.2581128
+	speed: 0.0288s/iter; left time: 1288.0093s
+	iters: 300, epoch: 1 | loss: 0.2869427
+	speed: 0.0285s/iter; left time: 1271.6448s
+	iters: 400, epoch: 1 | loss: 0.1959633
+	speed: 0.0284s/iter; left time: 1266.2589s
+	iters: 500, epoch: 1 | loss: 0.2705322
+	speed: 0.0286s/iter; left time: 1272.0787s
+	iters: 600, epoch: 1 | loss: 0.2370331
+	speed: 0.0284s/iter; left time: 1259.5864s
+	iters: 700, epoch: 1 | loss: 0.2338181
+	speed: 0.0290s/iter; left time: 1281.2635s
+	iters: 800, epoch: 1 | loss: 0.2262420
+	speed: 0.0287s/iter; left time: 1268.2398s
+	iters: 900, epoch: 1 | loss: 0.2190823
+	speed: 0.0285s/iter; left time: 1255.1499s
+	iters: 1000, epoch: 1 | loss: 0.2324012
+	speed: 0.0282s/iter; left time: 1237.9450s
+	iters: 1100, epoch: 1 | loss: 0.2616860
+	speed: 0.0283s/iter; left time: 1241.4434s
+	iters: 1200, epoch: 1 | loss: 0.2622267
+	speed: 0.0284s/iter; left time: 1240.3897s
+	iters: 1300, epoch: 1 | loss: 0.2527342
+	speed: 0.0280s/iter; left time: 1222.8610s
+	iters: 1400, epoch: 1 | loss: 0.2440442
+	speed: 0.0279s/iter; left time: 1216.4428s
+Epoch: 1 cost time: 42.95378494262695
+[DIAGNÓSTICO] Época 1:
+  LR actual: 0.00004986
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.095025
+  Norm de pesos: 473.854671
+  Grad norm promedio: 0.047547
+  Grad norm máximo: 0.281350
+Epoch: 1, Steps: 1498 | Train Loss: 0.2485713 Vali Loss: 0.1020240 Test Loss: 0.1602385
+Validation loss decreased (inf --> 0.102024).  Saving model ...
+	iters: 100, epoch: 2 | loss: 0.3078631
+	speed: 0.5553s/iter; left time: 24068.7722s
+	iters: 200, epoch: 2 | loss: 0.1824644
+	speed: 0.0281s/iter; left time: 1213.7250s
+	iters: 300, epoch: 2 | loss: 0.1995969
+	speed: 0.0277s/iter; left time: 1197.2144s
+	iters: 400, epoch: 2 | loss: 0.2217251
+	speed: 0.0283s/iter; left time: 1216.0440s
+	iters: 500, epoch: 2 | loss: 0.2247493
+	speed: 0.0285s/iter; left time: 1222.5834s
+	iters: 600, epoch: 2 | loss: 0.2095590
+	speed: 0.0281s/iter; left time: 1203.3704s
+	iters: 700, epoch: 2 | loss: 0.3109824
+	speed: 0.0288s/iter; left time: 1231.0924s
+	iters: 800, epoch: 2 | loss: 0.2787178
+	speed: 0.0287s/iter; left time: 1223.3305s
+	iters: 900, epoch: 2 | loss: 0.2464619
+	speed: 0.0301s/iter; left time: 1278.9962s
+	iters: 1000, epoch: 2 | loss: 0.2687468
+	speed: 0.0293s/iter; left time: 1241.7365s
+	iters: 1100, epoch: 2 | loss: 0.2245221
+	speed: 0.0300s/iter; left time: 1270.3903s
+	iters: 1200, epoch: 2 | loss: 0.1918054
+	speed: 0.0305s/iter; left time: 1286.5436s
+	iters: 1300, epoch: 2 | loss: 0.2233117
+	speed: 0.0314s/iter; left time: 1322.5864s
+	iters: 1400, epoch: 2 | loss: 0.2065318
+	speed: 0.0295s/iter; left time: 1239.7969s
+Epoch: 2 cost time: 43.66956806182861
+[DIAGNÓSTICO] Época 2:
+  LR actual: 0.00004946
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 1.089455
+  Norm de pesos: 532.516705
+  Grad norm promedio: 0.236356
+  Grad norm máximo: 1.392234
+Epoch: 2, Steps: 1498 | Train Loss: 0.2503037 Vali Loss: 0.1023847 Test Loss: 0.1619946
+EarlyStopping counter: 1 out of 15
+	iters: 100, epoch: 3 | loss: 0.2580752
+	speed: 0.5670s/iter; left time: 23724.3843s
+	iters: 200, epoch: 3 | loss: 0.2375053
+	speed: 0.0279s/iter; left time: 1163.9404s
+	iters: 300, epoch: 3 | loss: 0.3165891
+	speed: 0.0279s/iter; left time: 1163.1081s
+	iters: 400, epoch: 3 | loss: 0.2510338
+	speed: 0.0282s/iter; left time: 1171.8084s
+	iters: 500, epoch: 3 | loss: 0.2751707
+	speed: 0.0283s/iter; left time: 1170.8955s
+	iters: 600, epoch: 3 | loss: 0.2026808
+	speed: 0.0286s/iter; left time: 1182.2305s
+	iters: 700, epoch: 3 | loss: 0.2113951
+	speed: 0.0279s/iter; left time: 1151.8986s
+	iters: 800, epoch: 3 | loss: 0.2052144
+	speed: 0.0281s/iter; left time: 1156.4918s
+	iters: 900, epoch: 3 | loss: 0.3165930
+	speed: 0.0284s/iter; left time: 1166.8532s
+	iters: 1000, epoch: 3 | loss: 0.2538830
+	speed: 0.0281s/iter; left time: 1150.3408s
+	iters: 1100, epoch: 3 | loss: 0.2678998
+	speed: 0.0283s/iter; left time: 1155.2127s
+	iters: 1200, epoch: 3 | loss: 0.2157328
+	speed: 0.0280s/iter; left time: 1141.3762s
+	iters: 1300, epoch: 3 | loss: 0.2811061
+	speed: 0.0281s/iter; left time: 1141.2623s
+	iters: 1400, epoch: 3 | loss: 0.2600401
+	speed: 0.0283s/iter; left time: 1147.6835s
+Epoch: 3 cost time: 42.2125129699707
+[DIAGNÓSTICO] Época 3:
+  LR actual: 0.00004879
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.296229
+  Norm de pesos: 588.033395
+  Grad norm promedio: 0.552621
+  Grad norm máximo: 3.940777
+Epoch: 3, Steps: 1498 | Train Loss: 0.2519937 Vali Loss: 0.1027824 Test Loss: 0.1606435
+EarlyStopping counter: 2 out of 15
+	iters: 100, epoch: 4 | loss: 0.2180921
+	speed: 0.5521s/iter; left time: 22274.1089s
+	iters: 200, epoch: 4 | loss: 0.1688919
+	speed: 0.0278s/iter; left time: 1119.2931s
+	iters: 300, epoch: 4 | loss: 0.2615345
+	speed: 0.0284s/iter; left time: 1140.2358s
+	iters: 400, epoch: 4 | loss: 0.2273632
+	speed: 0.0282s/iter; left time: 1129.4732s
+	iters: 500, epoch: 4 | loss: 0.2727425
+	speed: 0.0281s/iter; left time: 1121.9367s
+	iters: 600, epoch: 4 | loss: 0.2245345
+	speed: 0.0282s/iter; left time: 1122.4059s
+	iters: 700, epoch: 4 | loss: 0.2728907
+	speed: 0.0280s/iter; left time: 1114.7920s
+	iters: 800, epoch: 4 | loss: 0.2116497
+	speed: 0.0281s/iter; left time: 1115.0136s
+	iters: 900, epoch: 4 | loss: 0.2442741
+	speed: 0.0281s/iter; left time: 1112.4749s
+	iters: 1000, epoch: 4 | loss: 0.2976671
+	speed: 0.0284s/iter; left time: 1118.8585s
+	iters: 1100, epoch: 4 | loss: 0.2331338
+	speed: 0.0278s/iter; left time: 1093.2273s
+	iters: 1200, epoch: 4 | loss: 0.2156749
+	speed: 0.0282s/iter; left time: 1105.6166s
+	iters: 1300, epoch: 4 | loss: 0.2229900
+	speed: 0.0282s/iter; left time: 1104.6364s
+	iters: 1400, epoch: 4 | loss: 0.2331387
+	speed: 0.0283s/iter; left time: 1103.8236s
+Epoch: 4 cost time: 42.17531991004944
+[DIAGNÓSTICO] Época 4:
+  LR actual: 0.00004786
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.196585
+  Norm de pesos: 632.068775
+  Grad norm promedio: 0.353200
+  Grad norm máximo: 11.302394
+Epoch: 4, Steps: 1498 | Train Loss: 0.2507954 Vali Loss: 0.1030196 Test Loss: 0.1598346
+EarlyStopping counter: 3 out of 15
+	iters: 100, epoch: 5 | loss: 0.2733631
+	speed: 0.5509s/iter; left time: 21403.6456s
+	iters: 200, epoch: 5 | loss: 0.2843006
+	speed: 0.0281s/iter; left time: 1088.2506s
+	iters: 300, epoch: 5 | loss: 0.2541239
+	speed: 0.0287s/iter; left time: 1110.8195s
+	iters: 400, epoch: 5 | loss: 0.2053058
+	speed: 0.0299s/iter; left time: 1152.0137s
+	iters: 500, epoch: 5 | loss: 0.3791779
+	speed: 0.0291s/iter; left time: 1118.6506s
+	iters: 600, epoch: 5 | loss: 0.2274959
+	speed: 0.0281s/iter; left time: 1078.5015s
+	iters: 700, epoch: 5 | loss: 0.1999830
+	speed: 0.0283s/iter; left time: 1082.3730s
+	iters: 800, epoch: 5 | loss: 0.2777322
+	speed: 0.0282s/iter; left time: 1074.7897s
+	iters: 900, epoch: 5 | loss: 0.3117480
+	speed: 0.0280s/iter; left time: 1065.3553s
+	iters: 1000, epoch: 5 | loss: 0.3781945
+	speed: 0.0283s/iter; left time: 1075.4868s
+	iters: 1100, epoch: 5 | loss: 0.2193295
+	speed: 0.0291s/iter; left time: 1099.5491s
+	iters: 1200, epoch: 5 | loss: 0.2502140
+	speed: 0.0282s/iter; left time: 1063.5483s
+	iters: 1300, epoch: 5 | loss: 0.2416962
+	speed: 0.0290s/iter; left time: 1092.3970s
+	iters: 1400, epoch: 5 | loss: 0.2392162
+	speed: 0.0289s/iter; left time: 1084.9874s
+Epoch: 5 cost time: 42.77313828468323
+[DIAGNÓSTICO] Época 5:
+  LR actual: 0.00004668
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.044783
+  Norm de pesos: 653.028710
+  Grad norm promedio: 5.037623
+  Grad norm máximo: 2767.662842
+Epoch: 5, Steps: 1498 | Train Loss: 0.2537144 Vali Loss: 0.1049740 Test Loss: 0.1618271
+EarlyStopping counter: 4 out of 15
+	iters: 100, epoch: 6 | loss: 0.1584248
+	speed: 0.5537s/iter; left time: 20680.4721s
+	iters: 200, epoch: 6 | loss: 0.2287816
+	speed: 0.0281s/iter; left time: 1045.6479s
+	iters: 300, epoch: 6 | loss: 0.2967135
+	speed: 0.0279s/iter; left time: 1037.5747s
+	iters: 400, epoch: 6 | loss: 0.2574399
+	speed: 0.0280s/iter; left time: 1035.6105s
+	iters: 500, epoch: 6 | loss: 0.2465176
+	speed: 0.0278s/iter; left time: 1028.4390s
+	iters: 600, epoch: 6 | loss: 0.2654349
+	speed: 0.0283s/iter; left time: 1042.5536s
+	iters: 700, epoch: 6 | loss: 0.2583790
+	speed: 0.0283s/iter; left time: 1038.7850s
+	iters: 800, epoch: 6 | loss: 0.2332132
+	speed: 0.0280s/iter; left time: 1024.7235s
+	iters: 900, epoch: 6 | loss: 0.2786818
+	speed: 0.0280s/iter; left time: 1025.0534s
+	iters: 1000, epoch: 6 | loss: 0.3034041
+	speed: 0.0278s/iter; left time: 1015.0783s
+	iters: 1100, epoch: 6 | loss: 0.2293642
+	speed: 0.0282s/iter; left time: 1025.9434s
+	iters: 1200, epoch: 6 | loss: 0.2713530
+	speed: 0.0283s/iter; left time: 1024.6371s
+	iters: 1300, epoch: 6 | loss: 0.2021869
+	speed: 0.0280s/iter; left time: 1012.5870s
+	iters: 1400, epoch: 6 | loss: 0.2508429
+	speed: 0.0278s/iter; left time: 1004.0170s
+Epoch: 6 cost time: 42.066144943237305
+[DIAGNÓSTICO] Época 6:
+  LR actual: 0.00004527
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.157150
+  Norm de pesos: 674.737189
+  Grad norm promedio: 0.107195
+  Grad norm máximo: 0.731864
+Epoch: 6, Steps: 1498 | Train Loss: 0.2534856 Vali Loss: 0.1045215 Test Loss: 0.1606278
+EarlyStopping counter: 5 out of 15
+	iters: 100, epoch: 7 | loss: 0.3197867
+	speed: 0.5531s/iter; left time: 19828.6408s
+	iters: 200, epoch: 7 | loss: 0.1825538
+	speed: 0.0277s/iter; left time: 988.9005s
+	iters: 300, epoch: 7 | loss: 0.2864333
+	speed: 0.0286s/iter; left time: 1020.3300s
+	iters: 400, epoch: 7 | loss: 0.1944258
+	speed: 0.0279s/iter; left time: 992.3888s
+	iters: 500, epoch: 7 | loss: 0.2059771
+	speed: 0.0280s/iter; left time: 994.2067s
+	iters: 600, epoch: 7 | loss: 0.2717290
+	speed: 0.0283s/iter; left time: 999.0861s
+	iters: 700, epoch: 7 | loss: 0.2603813
+	speed: 0.0279s/iter; left time: 983.3676s
+	iters: 800, epoch: 7 | loss: 0.1997377
+	speed: 0.0278s/iter; left time: 978.5587s
+	iters: 900, epoch: 7 | loss: 0.2075533
+	speed: 0.0281s/iter; left time: 985.3269s
+	iters: 1000, epoch: 7 | loss: 0.2614509
+	speed: 0.0281s/iter; left time: 982.7546s
+	iters: 1100, epoch: 7 | loss: 0.2216696
+	speed: 0.0285s/iter; left time: 994.6478s
+	iters: 1200, epoch: 7 | loss: 0.2532048
+	speed: 0.0281s/iter; left time: 976.5319s
+	iters: 1300, epoch: 7 | loss: 0.2393451
+	speed: 0.0281s/iter; left time: 975.4011s
+	iters: 1400, epoch: 7 | loss: 0.2674189
+	speed: 0.0281s/iter; left time: 969.6823s
+Epoch: 7 cost time: 42.10986018180847
+[DIAGNÓSTICO] Época 7:
+  LR actual: 0.00004364
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.267067
+  Norm de pesos: 703.782911
+  Grad norm promedio: 0.159466
+  Grad norm máximo: 1.390222
+Epoch: 7, Steps: 1498 | Train Loss: 0.2533835 Vali Loss: 0.1044405 Test Loss: 0.1605115
+EarlyStopping counter: 6 out of 15
+	iters: 100, epoch: 8 | loss: 0.3622091
+	speed: 0.5532s/iter; left time: 19005.9212s
+	iters: 200, epoch: 8 | loss: 0.2927347
+	speed: 0.0282s/iter; left time: 966.3353s
+	iters: 300, epoch: 8 | loss: 0.2252918
+	speed: 0.0281s/iter; left time: 961.2485s
+	iters: 400, epoch: 8 | loss: 0.3163688
+	speed: 0.0279s/iter; left time: 951.2958s
+	iters: 500, epoch: 8 | loss: 0.2442322
+	speed: 0.0280s/iter; left time: 950.1587s
+	iters: 600, epoch: 8 | loss: 0.2863750
+	speed: 0.0280s/iter; left time: 948.0144s
+	iters: 700, epoch: 8 | loss: 0.2415093
+	speed: 0.0281s/iter; left time: 949.3661s
+	iters: 800, epoch: 8 | loss: 0.3272235
+	speed: 0.0280s/iter; left time: 942.6389s
+	iters: 900, epoch: 8 | loss: 0.2375289
+	speed: 0.0280s/iter; left time: 939.4672s
+	iters: 1000, epoch: 8 | loss: 0.2223703
+	speed: 0.0279s/iter; left time: 934.9659s
+	iters: 1100, epoch: 8 | loss: 0.2356986
+	speed: 0.0281s/iter; left time: 935.8583s
+	iters: 1200, epoch: 8 | loss: 0.3096044
+	speed: 0.0281s/iter; left time: 934.6620s
+	iters: 1300, epoch: 8 | loss: 0.2501524
+	speed: 0.0282s/iter; left time: 934.1252s
+	iters: 1400, epoch: 8 | loss: 0.2385688
+	speed: 0.0283s/iter; left time: 933.9262s
+Epoch: 8 cost time: 42.070308685302734
+[DIAGNÓSTICO] Época 8:
+  LR actual: 0.00004181
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.042428
+  Norm de pesos: 737.768542
+  Grad norm promedio: 0.162336
+  Grad norm máximo: 2.286533
+Epoch: 8, Steps: 1498 | Train Loss: 0.2535904 Vali Loss: 0.1048588 Test Loss: 0.1608613
+EarlyStopping counter: 7 out of 15
+	iters: 100, epoch: 9 | loss: 0.3514412
+	speed: 0.5570s/iter; left time: 18301.1276s
+	iters: 200, epoch: 9 | loss: 0.2897168
+	speed: 0.0284s/iter; left time: 930.3459s
+	iters: 300, epoch: 9 | loss: 0.2268035
+	speed: 0.0281s/iter; left time: 918.9170s
+	iters: 400, epoch: 9 | loss: 0.2350957
+	speed: 0.0284s/iter; left time: 923.3074s
+	iters: 500, epoch: 9 | loss: 0.1940725
+	speed: 0.0285s/iter; left time: 924.1021s
+	iters: 600, epoch: 9 | loss: 0.1756941
+	speed: 0.0281s/iter; left time: 907.7821s
+	iters: 700, epoch: 9 | loss: 0.2496193
+	speed: 0.0280s/iter; left time: 901.8331s
+	iters: 800, epoch: 9 | loss: 0.2045125
+	speed: 0.0282s/iter; left time: 907.4224s
+	iters: 900, epoch: 9 | loss: 0.2977096
+	speed: 0.0281s/iter; left time: 900.5449s
+	iters: 1000, epoch: 9 | loss: 0.2831897
+	speed: 0.0284s/iter; left time: 906.4759s
+	iters: 1100, epoch: 9 | loss: 0.2487249
+	speed: 0.0282s/iter; left time: 897.8281s
+	iters: 1200, epoch: 9 | loss: 0.3084181
+	speed: 0.0280s/iter; left time: 888.2084s
+	iters: 1300, epoch: 9 | loss: 0.2731082
+	speed: 0.0281s/iter; left time: 888.7313s
+	iters: 1400, epoch: 9 | loss: 0.2445596
+	speed: 0.0286s/iter; left time: 901.2086s
+Epoch: 9 cost time: 42.26692605018616
+[DIAGNÓSTICO] Época 9:
+  LR actual: 0.00003980
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.105426
+  Norm de pesos: 774.504432
+  Grad norm promedio: 0.187774
+  Grad norm máximo: 1.501633
+Epoch: 9, Steps: 1498 | Train Loss: 0.2535345 Vali Loss: 0.1041501 Test Loss: 0.1609204
+EarlyStopping counter: 8 out of 15
+	iters: 100, epoch: 10 | loss: 0.1793077
+	speed: 0.5538s/iter; left time: 17365.3784s
+	iters: 200, epoch: 10 | loss: 0.4076865
+	speed: 0.0280s/iter; left time: 875.3035s
+	iters: 300, epoch: 10 | loss: 0.2161529
+	speed: 0.0279s/iter; left time: 868.4543s
+	iters: 400, epoch: 10 | loss: 0.2839709
+	speed: 0.0282s/iter; left time: 875.7352s
+	iters: 500, epoch: 10 | loss: 0.2607752
+	speed: 0.0282s/iter; left time: 872.7589s
+	iters: 600, epoch: 10 | loss: 0.2862544
+	speed: 0.0281s/iter; left time: 866.0347s
+	iters: 700, epoch: 10 | loss: 0.2996750
+	speed: 0.0278s/iter; left time: 854.5329s
+	iters: 800, epoch: 10 | loss: 0.1873560
+	speed: 0.0280s/iter; left time: 859.2973s
+	iters: 900, epoch: 10 | loss: 0.2533782
+	speed: 0.0280s/iter; left time: 856.9615s
+	iters: 1000, epoch: 10 | loss: 0.2329190
+	speed: 0.0282s/iter; left time: 860.0119s
+	iters: 1100, epoch: 10 | loss: 0.2156472
+	speed: 0.0279s/iter; left time: 847.9644s
+	iters: 1200, epoch: 10 | loss: 0.2549021
+	speed: 0.0281s/iter; left time: 851.3455s
+	iters: 1300, epoch: 10 | loss: 0.2399412
+	speed: 0.0280s/iter; left time: 844.3781s
+	iters: 1400, epoch: 10 | loss: 0.2132280
+	speed: 0.0282s/iter; left time: 849.0240s
+Epoch: 10 cost time: 42.0377140045166
+[DIAGNÓSTICO] Época 10:
+  LR actual: 0.00003762
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.156846
+  Norm de pesos: 795.599123
+  Grad norm promedio: 0.222613
+  Grad norm máximo: 12.176962
+Epoch: 10, Steps: 1498 | Train Loss: 0.2533815 Vali Loss: 0.1044030 Test Loss: 0.1613011
+EarlyStopping counter: 9 out of 15
+	iters: 100, epoch: 11 | loss: 0.2952868
+	speed: 0.5536s/iter; left time: 16531.9633s
+	iters: 200, epoch: 11 | loss: 0.2900603
+	speed: 0.0286s/iter; left time: 851.8247s
+	iters: 300, epoch: 11 | loss: 0.2733636
+	speed: 0.0283s/iter; left time: 840.0649s
+	iters: 400, epoch: 11 | loss: 0.2536891
+	speed: 0.0281s/iter; left time: 831.3603s
+	iters: 500, epoch: 11 | loss: 0.2502593
+	speed: 0.0281s/iter; left time: 826.5398s
+	iters: 600, epoch: 11 | loss: 0.2276752
+	speed: 0.0281s/iter; left time: 824.0179s
+	iters: 700, epoch: 11 | loss: 0.2692712
+	speed: 0.0280s/iter; left time: 820.4545s
+	iters: 800, epoch: 11 | loss: 0.2737142
+	speed: 0.0285s/iter; left time: 829.7069s
+	iters: 900, epoch: 11 | loss: 0.2577376
+	speed: 0.0282s/iter; left time: 818.3618s
+	iters: 1000, epoch: 11 | loss: 0.2595782
+	speed: 0.0278s/iter; left time: 804.6067s
+	iters: 1100, epoch: 11 | loss: 0.2122207
+	speed: 0.0279s/iter; left time: 805.6459s
+	iters: 1200, epoch: 11 | loss: 0.2794816
+	speed: 0.0280s/iter; left time: 805.6560s
+	iters: 1300, epoch: 11 | loss: 0.3284291
+	speed: 0.0281s/iter; left time: 804.8361s
+	iters: 1400, epoch: 11 | loss: 0.2200683
+	speed: 0.0281s/iter; left time: 802.6715s
+Epoch: 11 cost time: 42.17390727996826
+[DIAGNÓSTICO] Época 11:
+  LR actual: 0.00003532
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.251903
+  Norm de pesos: 818.364932
+  Grad norm promedio: 0.140144
+  Grad norm máximo: 19.517921
+Epoch: 11, Steps: 1498 | Train Loss: 0.2535045 Vali Loss: 0.1037616 Test Loss: 0.1609806
+EarlyStopping counter: 10 out of 15
+	iters: 100, epoch: 12 | loss: 0.2719608
+	speed: 0.5578s/iter; left time: 15821.9334s
+	iters: 200, epoch: 12 | loss: 0.2954569
+	speed: 0.0274s/iter; left time: 775.8179s
+	iters: 300, epoch: 12 | loss: 0.2617612
+	speed: 0.0281s/iter; left time: 790.7204s
+	iters: 400, epoch: 12 | loss: 0.3305645
+	speed: 0.0286s/iter; left time: 803.5753s
+	iters: 500, epoch: 12 | loss: 0.1926648
+	speed: 0.0284s/iter; left time: 795.0843s
+	iters: 600, epoch: 12 | loss: 0.1866055
+	speed: 0.0283s/iter; left time: 788.4978s
+	iters: 700, epoch: 12 | loss: 0.2564178
+	speed: 0.0285s/iter; left time: 791.3272s
+	iters: 800, epoch: 12 | loss: 0.2264389
+	speed: 0.0288s/iter; left time: 796.9646s
+	iters: 900, epoch: 12 | loss: 0.2843561
+	speed: 0.0287s/iter; left time: 791.9185s
+	iters: 1000, epoch: 12 | loss: 0.2550344
+	speed: 0.0283s/iter; left time: 776.9969s
+	iters: 1100, epoch: 12 | loss: 0.2191698
+	speed: 0.0285s/iter; left time: 779.7056s
+	iters: 1200, epoch: 12 | loss: 0.2480875
+	speed: 0.0280s/iter; left time: 763.6928s
+	iters: 1300, epoch: 12 | loss: 0.3114834
+	speed: 0.0281s/iter; left time: 762.8242s
+	iters: 1400, epoch: 12 | loss: 0.2604929
+	speed: 0.0279s/iter; left time: 754.7229s
+Epoch: 12 cost time: 42.33293890953064
+[DIAGNÓSTICO] Época 12:
+  LR actual: 0.00003290
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.162541
+  Norm de pesos: 841.894755
+  Grad norm promedio: 0.183309
+  Grad norm máximo: 8.504731
+Epoch: 12, Steps: 1498 | Train Loss: 0.2549258 Vali Loss: 0.1049500 Test Loss: 0.1617107
+EarlyStopping counter: 11 out of 15
+	iters: 100, epoch: 13 | loss: 0.3155761
+	speed: 0.5571s/iter; left time: 14966.5766s
+	iters: 200, epoch: 13 | loss: 0.2889744
+	speed: 0.0276s/iter; left time: 739.8716s
+	iters: 300, epoch: 13 | loss: 0.2393108
+	speed: 0.0283s/iter; left time: 753.7596s
+	iters: 400, epoch: 13 | loss: 0.3265134
+	speed: 0.0284s/iter; left time: 754.5725s
+	iters: 500, epoch: 13 | loss: 0.2768398
+	speed: 0.0282s/iter; left time: 745.7849s
+	iters: 600, epoch: 13 | loss: 0.3325534
+	speed: 0.0281s/iter; left time: 740.6912s
+	iters: 700, epoch: 13 | loss: 0.2344437
+	speed: 0.0282s/iter; left time: 739.7637s
+	iters: 800, epoch: 13 | loss: 0.2278962
+	speed: 0.0280s/iter; left time: 732.2040s
+	iters: 900, epoch: 13 | loss: 0.2381555
+	speed: 0.0279s/iter; left time: 726.5421s
+	iters: 1000, epoch: 13 | loss: 0.1933119
+	speed: 0.0282s/iter; left time: 731.3818s
+	iters: 1100, epoch: 13 | loss: 0.2384897
+	speed: 0.0286s/iter; left time: 739.1017s
+	iters: 1200, epoch: 13 | loss: 0.2127403
+	speed: 0.0279s/iter; left time: 719.5419s
+	iters: 1300, epoch: 13 | loss: 0.1995493
+	speed: 0.0279s/iter; left time: 716.3540s
+	iters: 1400, epoch: 13 | loss: 0.2078331
+	speed: 0.0277s/iter; left time: 708.5227s
+Epoch: 13 cost time: 42.050111055374146
+[DIAGNÓSTICO] Época 13:
+  LR actual: 0.00003040
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.155220
+  Norm de pesos: 859.814177
+  Grad norm promedio: 0.770790
+  Grad norm máximo: 813.069885
+Epoch: 13, Steps: 1498 | Train Loss: 0.2544369 Vali Loss: 0.1047457 Test Loss: 0.1610194
+EarlyStopping counter: 12 out of 15
+	iters: 100, epoch: 14 | loss: 0.2092702
+	speed: 0.5508s/iter; left time: 13972.7966s
+	iters: 200, epoch: 14 | loss: 0.2379654
+	speed: 0.0279s/iter; left time: 704.0559s
+	iters: 300, epoch: 14 | loss: 0.3323029
+	speed: 0.0281s/iter; left time: 706.1435s
+	iters: 400, epoch: 14 | loss: 0.2828532
+	speed: 0.0281s/iter; left time: 704.1276s
+	iters: 500, epoch: 14 | loss: 0.2754933
+	speed: 0.0281s/iter; left time: 701.6636s
+	iters: 600, epoch: 14 | loss: 0.1968818
+	speed: 0.0284s/iter; left time: 706.4315s
+	iters: 700, epoch: 14 | loss: 0.3067494
+	speed: 0.0293s/iter; left time: 724.6863s
+	iters: 800, epoch: 14 | loss: 0.3605582
+	speed: 0.0290s/iter; left time: 715.7461s
+	iters: 900, epoch: 14 | loss: 0.2039078
+	speed: 0.0280s/iter; left time: 687.4448s
+	iters: 1000, epoch: 14 | loss: 0.2309216
+	speed: 0.0283s/iter; left time: 691.4269s
+	iters: 1100, epoch: 14 | loss: 0.2121838
+	speed: 0.0282s/iter; left time: 687.1898s
+	iters: 1200, epoch: 14 | loss: 0.2791578
+	speed: 0.0282s/iter; left time: 683.4527s
+	iters: 1300, epoch: 14 | loss: 0.1646721
+	speed: 0.0283s/iter; left time: 684.1141s
+	iters: 1400, epoch: 14 | loss: 0.3252453
+	speed: 0.0279s/iter; left time: 672.1394s
+Epoch: 14 cost time: 42.316365242004395
+[DIAGNÓSTICO] Época 14:
+  LR actual: 0.00002784
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.158121
+  Norm de pesos: 875.286412
+  Grad norm promedio: 1.871588
+  Grad norm máximo: 1633.374390
+Epoch: 14, Steps: 1498 | Train Loss: 0.2539837 Vali Loss: 0.1045552 Test Loss: 0.1616063
+EarlyStopping counter: 13 out of 15
+	iters: 100, epoch: 15 | loss: 0.2432889
+	speed: 0.5498s/iter; left time: 13122.1961s
+	iters: 200, epoch: 15 | loss: 0.2167676
+	speed: 0.0280s/iter; left time: 665.7783s
+	iters: 300, epoch: 15 | loss: 0.2355323
+	speed: 0.0279s/iter; left time: 660.5428s
+	iters: 400, epoch: 15 | loss: 0.3354909
+	speed: 0.0274s/iter; left time: 646.9485s
+	iters: 500, epoch: 15 | loss: 0.2470881
+	speed: 0.0277s/iter; left time: 651.1978s
+	iters: 600, epoch: 15 | loss: 0.1838722
+	speed: 0.0280s/iter; left time: 653.8695s
+	iters: 700, epoch: 15 | loss: 0.2443496
+	speed: 0.0281s/iter; left time: 652.8555s
+	iters: 800, epoch: 15 | loss: 0.2246066
+	speed: 0.0287s/iter; left time: 664.6526s
+	iters: 900, epoch: 15 | loss: 0.2876988
+	speed: 0.0282s/iter; left time: 650.0701s
+	iters: 1000, epoch: 15 | loss: 0.2310834
+	speed: 0.0281s/iter; left time: 645.0621s
+	iters: 1100, epoch: 15 | loss: 0.2513845
+	speed: 0.0278s/iter; left time: 636.0357s
+	iters: 1200, epoch: 15 | loss: 0.2344761
+	speed: 0.0279s/iter; left time: 634.5804s
+	iters: 1300, epoch: 15 | loss: 0.2186475
+	speed: 0.0282s/iter; left time: 639.0515s
+	iters: 1400, epoch: 15 | loss: 0.2876180
+	speed: 0.0282s/iter; left time: 636.3059s
+Epoch: 15 cost time: 41.946134090423584
+[DIAGNÓSTICO] Época 15:
+  LR actual: 0.00002525
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.442424
+  Norm de pesos: 890.903130
+  Grad norm promedio: 1.707449
+  Grad norm máximo: 1117.494019
+Epoch: 15, Steps: 1498 | Train Loss: 0.2551361 Vali Loss: 0.1044235 Test Loss: 0.1615616
+EarlyStopping counter: 14 out of 15
+	iters: 100, epoch: 16 | loss: 0.1896288
+	speed: 0.5649s/iter; left time: 12636.6323s
+	iters: 200, epoch: 16 | loss: 0.2990976
+	speed: 0.0297s/iter; left time: 660.8106s
+	iters: 300, epoch: 16 | loss: 0.2912518
+	speed: 0.0283s/iter; left time: 627.3127s
+	iters: 400, epoch: 16 | loss: 0.2463891
+	speed: 0.0281s/iter; left time: 621.1552s
+	iters: 500, epoch: 16 | loss: 0.2597491
+	speed: 0.0281s/iter; left time: 617.7850s
+	iters: 600, epoch: 16 | loss: 0.2989452
+	speed: 0.0281s/iter; left time: 615.0495s
+	iters: 700, epoch: 16 | loss: 0.2529895
+	speed: 0.0282s/iter; left time: 614.1788s
+	iters: 800, epoch: 16 | loss: 0.3129009
+	speed: 0.0282s/iter; left time: 610.1945s
+	iters: 900, epoch: 16 | loss: 0.2412839
+	speed: 0.0282s/iter; left time: 608.8482s
+	iters: 1000, epoch: 16 | loss: 0.2622465
+	speed: 0.0285s/iter; left time: 611.4694s
+	iters: 1100, epoch: 16 | loss: 0.1811093
+	speed: 0.0284s/iter; left time: 606.2421s
+	iters: 1200, epoch: 16 | loss: 0.2495952
+	speed: 0.0282s/iter; left time: 600.9010s
+	iters: 1300, epoch: 16 | loss: 0.2138332
+	speed: 0.0282s/iter; left time: 596.3318s
+	iters: 1400, epoch: 16 | loss: 0.2036934
+	speed: 0.0280s/iter; left time: 590.5906s
+Epoch: 16 cost time: 42.59110403060913
+[DIAGNÓSTICO] Época 16:
+  LR actual: 0.00002266
+  Grad clip: 10.0
+  Norm de gradientes (último batch): 0.075665
+  Norm de pesos: 905.938170
+  Grad norm promedio: 0.299902
+  Grad norm máximo: 22.095041
+Epoch: 16, Steps: 1498 | Train Loss: 0.2553687 Vali Loss: 0.1047586 Test Loss: 0.1614762
+EarlyStopping counter: 15 out of 15
+Early stopping
+>>>>>>>testing : ETTm1_96_720_iTransformer_ETTm1_MS_ft96_sl48_ll720_pl256_dm16_nh4_el1_dl1024_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 13217
+test shape: (13217, 1, 720, 1) (13217, 1, 720, 1)
+test shape: (13217, 720, 1) (13217, 720, 1)
+mse:0.16023856401443481, mae:0.30740365386009216
